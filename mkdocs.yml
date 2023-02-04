@@ -1,0 +1,42 @@
+# Project information
+site_name: PBP Genap 2022/2023
+site_author: PBP Fasilkom UI
+site_description: >-
+  Situs Web Pemrograman Berbasis Platform Genap 2022/2023
+
+# Copyright
+copyright: Copyright &copy; 2023 PBP Fasilkom UI
+
+theme:
+  language: id
+  logo: assets/img/logo.png
+  favicon: assets/img/logo.png
+  name: material
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: light green
+      accent: deep orange
+      toggle:
+        icon: material/lightbulb
+        name: Beralih ke mode gelap
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: light green
+      accent: deep orange
+      toggle:
+        icon: material/lightbulb-outline
+        name: Beralih ke mode terang
+
+plugins:
+  - search
+  - git-revision-date-localized:
+      type: datetime
+      custom_format: "%d. %B %Y"
+      timezone: Asia/Jakarta
+      locale: id
+      fallback_to_build_date: false
+      enable_creation_date: true
+      enabled: true
