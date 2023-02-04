@@ -1,17 +1,12 @@
-# Welcome to MkDocs
+# Beranda
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Selamat datang di Pemrograman Berbasis Platform Semester Genap 2022/2023. Halaman di akan memuat informasi terkait dengan perkuliahan. Tutorial mingguan akan di-*publish* secara berkala di website ini. Harap untuk sering mengecek halaman ini.
 
-## Commands
+## Dosen
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+[Arawinda Dinakaramani, S.Kom., M.Hum.](mailto:arawinda@ui.ac.id)
 
-## Project layout
+## Asisten Dosen
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+1. [Muhammad Athallah](mailto:muhammad.athallah01@ui.ac.id) (LAH) - Koordinator Asisten Dosen
+2. [Muhammad Iqbal Dwitama](mailto:muhammad.iqbal111@ui.ac.id) (MID)

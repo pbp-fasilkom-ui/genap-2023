@@ -1,19 +1,21 @@
-## Preview
+# Situs Web PBP Genap 2022/2023
 
-To start a live preview server, type:
+## Pratinjau
 
-```
+Untuk memulai pratinjau situs web secara langsung, ketik:
+
+```bash
 mkdocs serve 
 ```
 
 ## Build
 
-To build a static site, type:
+Untuk membangun situs web statis, ketik:
 
-```
+```bash
 mkdocs build
 ```
 
-## Reference
+## Referensi
 
 - <https://squidfunk.github.io/mkdocs-material>
