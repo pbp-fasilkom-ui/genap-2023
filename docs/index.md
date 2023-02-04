@@ -1,6 +1,6 @@
 # Beranda
 
-Selamat datang di Pemrograman Berbasis Platform Semester Genap 2022/2023. Halaman di akan memuat informasi terkait dengan perkuliahan. Tutorial mingguan akan di-*publish* secara berkala di website ini. Harap untuk sering mengecek halaman ini.
+Selamat datang di Pemrograman Berbasis Platform Semester Genap 2022/2023. Halaman di akan memuat informasi terkait dengan perkuliahan. Informasi mengenai tutorial, lab, dan tugas lainnya akan di-*publish* secara berkala di situs web ini. Harap untuk sering mengecek halaman ini.
 
 ## Dosen
 
