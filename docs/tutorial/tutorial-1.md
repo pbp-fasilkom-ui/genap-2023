@@ -282,6 +282,10 @@ Sekarang kita akan mencoba untuk menerapkan konsep _branch_ dan _merge_.
 
 ## Tutorial: Membuat Proyek dan Aplikasi Django beserta Konfigurasi Model
 
+Sebagai bayangan, berikut adalah struktur direktori proyek setelah kamu menyelesaikan tutorial ini.
+
+![Directory Structure](https://i.ibb.co/hHz8MwP/Selection-1807.png)
+
 1. Di dalam direktori `django_exercise`, bukalah _command prompt_ atau _shell_ dan buatlah sebuah _virtual environment_. _Virtual environment_ ini berguna untuk mengisolasi _package_ serta _dependencies_ dari aplikasi sehingga tidak bertabrakan dengan versi lain yang ada pada komputermu. Kamu dapat membuat _virtual environment_ dengan perintah:
 
     ```bash
@@ -290,15 +294,17 @@ Sekarang kita akan mencoba untuk menerapkan konsep _branch_ dan _merge_.
 
 2. Nyalakan _virtual environment_ yang telah dibuat dengan perintah berikut. Pastikan saat ini kamu sedang berada pada direktori `django_exercise` yang telah dibuat sebelumnya. Perhatikan pula bahwa Windows dengan Unix memiliki perintah yang berbeda. Apabila virtual environment berhasil dinyalakan, kamu dapat melihat sebuah teks `(env)` di posisi paling kiri dari baris input _shell_ milikmu.
 
-    ```bash
-    Windows:
-    env\Scripts\activate.bat
-    ```
+    - Windows
 
-    ```bash
-    Unix (Linux & Mac OS):
-    source env/bin/activate
-    ```
+        ```bash
+        env\Scripts\activate.bat
+        ```
+
+    - Unix (Linux & Mac OS)
+
+        ```bash
+        source env/bin/activate
+        ```
 
 3. Buatlah file baru pada folder tersebut dengan nama `requirements.txt` dan tambahkan beberapa dependencies berikut ini yang dibutuhkan ke dalam file tersebut.
 
@@ -319,7 +325,7 @@ Sekarang kita akan mencoba untuk menerapkan konsep _branch_ dan _merge_.
 
 4. Instal _dependencies_ yang diperlukan untuk menjalankan proyek Django dengan perintah perintah `pip install -r requirements.txt`.
 
-5. Buatlah sebuah proyek Django baru bernama `django_tutorial` dengan perintah `django-admin startproject django_tutorial .`.
+5. Buatlah sebuah proyek Django baru bernama `django_tutorial` dengan perintah `django-admin startproject django_tutorial .` (pakai titik di akhir perintah).
 
 6. Eksekusi perintah `python manage.py runserver` di Windows atau `./manage.py runserver` di OS berbasis Unix untuk menjalankan aplikasi Django. Pastikan bahwa file `manage.py` ada pada direktori yang aktif pada _shell_ kamu saat ini.
 
@@ -345,7 +351,7 @@ Sekarang kita akan mencoba untuk menerapkan konsep _branch_ dan _merge_.
 
     class TransactionRecord(models.Model):
         name = models.CharField(max_length=50)
-        type = models.Charfield(max_length=20)
+        type = models.CharField(max_length=20)
         amount = models.IntegerField()
         date = models.DateTimeField(auto_now_add=True)
         description = models.TextField()
@@ -361,30 +367,43 @@ Sekarang kita akan mencoba untuk menerapkan konsep _branch_ dan _merge_.
 
 Sebelum kita mengimplemetasikan _views_, kita perlu membuat suatu _skeleton_ yang berfungsi sebagai kerangka _views_ dari situs web kita.
 
-Buatlah folder `templates` pada _root folder_ (jika belum ada) dan buatlah sebuah file baru bernama `base.html`. Isilah file tersebut dengan kode berikut.
+1. Buatlah folder `templates` pada _root folder_ (jika belum ada) dan buatlah sebuah file baru bernama `base.html`. Isilah file tersebut dengan kode berikut.
 
-```html
+    ```html
+    {% load static %}
+    <!DOCTYPE html>
+    <html lang="en">
 
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% block meta %}
+    {% endblock meta %}
+    </head>
 
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
+    <body>
+    {% block content %}
+    {% endblock content %}
+    </body>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="{% static 'css/style.css' %}">
-  {% block meta %}
-  {% endblock meta %}
-</head>
+    </html>
+    ```
 
-<body>
-  {% block content %}
-  {% endblock content %}
-</body>
+2. Bukalah `settings.py` yang ada pada folder `django_tutorial` dan carilah baris yang mengandung `TEMPLATES`. Sesuaikan kode yang ada dengan potongan kode berikut agar file `base.html` terdeteksi sebagai file templat.
 
-</html>
-```
+    ```python
+    ...
+    TEMPLATES = [
+        {
+            'BACKEND': 'django.template.backends.django.DjangoTemplates',
+            'DIRS': [BASE_DIR / 'templates'],
+            'APP_DIRS': True,
+            ...
+        }
+    ]
+    ...
+    ```
 
 Setelah membuat kerangka dasar HTML untuk situs web, maka kita baru dapat membuat _view_ baru tanpa perlu mendeklarasikan struktur dasar HTML dari awal.
 
@@ -392,7 +411,7 @@ Setelah membuat kerangka dasar HTML untuk situs web, maka kita baru dapat membua
 
     ```python
     def show_tracker(request):
-        return render(request, "money_tracker.html")
+        return render(request, "tracker.html")
 
     ```
 
@@ -436,7 +455,9 @@ Setelah membuat kerangka dasar HTML untuk situs web, maka kita baru dapat membua
 
     ```python
     ...
-    path('tracker/', include('tracker.urls')),
+    from django.urls import path, include
+    ...
+    path('tracker/', include('money_tracker.urls')),
     ...
     ```
 
@@ -448,7 +469,7 @@ Apabila muncul sebuah halaman yang berisikan tabel _money tracker_, maka selamat
 
 ## Tutorial: Menghubungkan Models dengan Views dan Template
 
-1. Pada fungsi views yang telah kamu buat, import models yang sudah kamu buat sebelumnya ke dalam file views.py. Kamu akan menggunakan class tersebut untuk melakukan pengambilan data dari database. Contohnya adalah sebagai berikut.
+1. Pada fungsi views yang telah kamu buat, impor model yang sudah kamu buat sebelumnya ke dalam file `views.py`. Kamu akan menggunakan _class_ tersebut untuk melakukan pengambilan data dari database. Contohnya adalah sebagai berikut.
 
     ```python
     from django.shortcuts import render
@@ -474,16 +495,31 @@ Apabila muncul sebuah halaman yang berisikan tabel _money tracker_, maka selamat
     return render(request, "tracker.html", context)
     ```
 
+    Dengan demikian, kode `show_tracker` menjadi seperti berikut.
+
+    ```python
+    from django.shortcuts import render
+    from money_tracker.models import TransactionRecord
+
+    def show_tracker(request):
+        transaction_data = TransactionRecord.objects.all()
+        context = {
+            'list_of_transactions': transaction_data,
+            'name': 'Kak Athal'
+        }
+        return render(request, "tracker.html", context)
+    ```
+
 Sekarang, kamu akan belajar melakukan _mapping_ terhadap data yang telah ikut di-_render_ pada fungsi `views` untuk dapat memunculkannya di halaman HTML. Untuk melakukan _mapping_ tersebut, kamu dapat menggunakan sintaks khusus _template_ yang ada pada Django, yakni `{{data}}`. Apabila kamu tertarik untuk mengetahui lebih jauh tentang sintaks dari _template_ yang ada pada Django, kamu dapat membaca dan mempelajari lebih dalam di [dokumentasi _template tags_ Django](https://docs.djangoproject.com/en/4.1/ref/templates/builtins/).
 
 1. Bukalah file HTML yang sudah kamu buat sebelumnya pada folder `templates` yang ada di dalam direktori `money_tracker`.
 
-2. Ubah `Fill me!` yang ada di dalam HTML tag `<p>` menjadi `{{nama}}` untuk menampilkan nama kamu di halaman HTML. Contohnya adalah sebagai berikut.
+2. Ubah `Fill me!` yang ada di dalam HTML tag `<p>` menjadi `{{name}}` untuk menampilkan nama kamu di halaman HTML. Contohnya adalah sebagai berikut.
 
     ```html
     ...
     <h5>Nama: </h5>
-    <b>{{nama}}</b>
+    <b>{{name}}</b>
     ...
     ```
 
@@ -502,6 +538,8 @@ Sekarang, kamu akan belajar melakukan _mapping_ terhadap data yang telah ikut di
     {% endfor %}
     ...
     ```
+
+Coba lakukan `runserver`; seharusnya kamu dapat melihat kolom nama berubah menjadi nama yang telah kamu isi sebelumnya pada file `views.py`.
 
 ---
 
