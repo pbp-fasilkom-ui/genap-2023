@@ -15,6 +15,9 @@ theme:
   features:
     - content.code.copy
     - content.code.annotate
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.indexes
   palette:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
@@ -50,3 +53,11 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+
+nav:
+  - Beranda:
+    - index.md
+  - Tutorial:
+    - Tutorial 1: tutorial/tutorial-1.md
+  - Tugas:
+    - Tugas 2: tugas/tugas-2.md
