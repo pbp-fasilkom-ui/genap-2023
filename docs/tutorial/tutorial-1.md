@@ -1,4 +1,4 @@
-# Lab 1: Dasar-Dasar Git dan Django
+# Tutorial 1: Dasar-Dasar Git dan Django
 
 Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu Komputer Universitas Indonesia, Semester Genap 2022/2023
 
