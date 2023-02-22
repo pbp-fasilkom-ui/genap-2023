@@ -59,5 +59,7 @@ nav:
     - index.md
   - Tutorial:
     - Tutorial 1: tutorial/tutorial-1.md
+    - Tutorial 2: tutorial/tutorial-2.md
   - Tugas:
+    - Tugas 1: tugas/tugas-1.md
     - Tugas 2: tugas/tugas-2.md
