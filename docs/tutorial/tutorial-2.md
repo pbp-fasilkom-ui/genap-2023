@@ -69,9 +69,123 @@ Data pada JSON disimpan dalam bentuk _key_ dan _value_. Pada contoh di atas yang
 
 ---
 
-## Disclaimer
+## Tutorial: Membuat Form Registrasi
 
-Dikarenakan belum adanya data yang dimasukkan ke dalam basis data hingga tutorial ini, janganlah kaget apabila fungsi yang akan dibuat tidak menghasilkan data apa-apa. Fungsi _data delivery_ akan tampak hasilnya setelah kamu menyelesaikan tutorial berikutnya (Input Data melalui Form).
+Sampai saat ini, belum ada data yang ditambahkan ke dalam aplikasi. Sekarang, kita akan membuat sebuah _form_ sederhana untuk menginput data transaksi pada aplikasi sehingga nantinya kamu dapat menambahkan data baru untuk ditampilkan pada halaman utama.
+
+Catatan: Pada tutorial ini, kamu akan menggunakan proyek yang sudah kamu buat pada tutorial sebelumnya.
+
+1. Jalankan _virtual environment_ terlebih dahulu.
+
+2. Buka `models.py` yang ada pada folder `money_tracker` yang sudah dibuat sebelumnya. Ubahlah kode model menjadi seperti berikut agar tipe transaksi dibatasi pada pemasukan dan pengeluaran saja.
+
+    ```python
+    from django.db import models
+
+    TYPE_CHOICES = [
+        ('Pengeluaran', 'Pengeluaran'),
+        ('Pemasukan', 'Pemasukan')
+    ]
+
+    class TransactionRecord(models.Model):
+        name = models.CharField(max_length=50)
+        type = models.CharField(max_length=20, choices=TYPE_CHOICES)
+        amount = models.IntegerField()
+        date = models.DateTimeField(auto_now_add=True)
+        description = models.TextField()
+    ```
+
+3. Lakukanlah migrasi dengan perintah `python manage.py makemigrations` dan `python manage.py migrate` pada Terminal atau Command Prompt untuk mengaplikasikan perubahan model yang telah dilakukan pada langkah sebelumnya.
+
+4. Buatlah _file_ baru pada folder `money_tracker` dengan nama `forms.py` untuk membuat struktur _form_ yang dapat menerima data transaksi baru. Tambahkan kode berikut ke dalam _file_ `forms.py`.
+    
+    ```python
+    from django.forms import ModelForm
+    from money_tracker.models import TransactionRecord
+
+    class TransactionRecordForm(ModelForm):
+        class Meta:
+            model = TransactionRecord
+            fields = ["name", "type", "amount", "description"]
+    ```
+
+5.  Kemudian, bukalah _file_ `views.py` yang ada pada folder `money_tracker` dan tambahkan  _import_ `HttpResponseRedirect`, `TransactionRecordForm`, dan `reverse` pada bagian paling atas.
+
+    ```python
+    from django.http import HttpResponseRedirect
+    from money_tracker.forms import TransactionRecordForm
+    from django.urls import reverse
+    ```
+
+6. Buatlah fungsi baru dengan nama `create_transaction` pada _file_ tersebut yang menerima parameter `request`, dan tambahkan potongan kode di bawah ini untuk menghasilkan formulir yang dapat menambahkan data transaksi secara otomatis ketika data di-_submit_ dari _form_.
+
+    ```python
+    def create_transaction(request):
+        form = TransactionRecordForm(request.POST or None)
+
+        if form.is_valid() and request.method == "POST":
+            form.save()
+            return HttpResponseRedirect(reverse('money_tracker:show_tracker'))
+        
+        context = {'form': form}
+        return render(request, "create_transaction.html", context)
+    ```
+
+7. Buatlah berkas HTML baru dengan nama `create_transaction.html` pada folder `money_tracker/templates`. Isi dari `create_transaction.html` dapat kamu isi dengan _template_ berikut.
+
+    ```html
+    {% extends 'base.html' %}
+
+    {% load static %}
+
+    {% block content %}
+
+    <h1>Tambah Transaksi Baru</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Tambah"/>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    {% endblock %}
+    ```
+
+8. Buka `urls.py` yang ada pada folder `money_tracker` dan `import` fungsi yang sudah kamu buat tadi.
+
+    ```python
+    from money_tracker.views import create_transaction
+    ```
+
+9. Tambahkan _path url_ ke dalam `urlpatterns` untuk mengakses fungsi yang sudah di-_import_ pada poin sebelumnya.
+
+    ```python
+    path('create', create_transaction, name='create_transaction'),
+    ```
+
+10. Buka `tracker.html` dan tambahkan kode berikut setelah _block_ `<table></table>`untuk menambahkan _button_ tambah transaksi baru.
+
+    ```html
+    ...
+    </table>
+
+    <br>
+    <a href="{% url 'money_tracker:create_transaction' %}">
+        <button>
+            Transaksi Baru
+        </button>
+    </a>
+    ...
+    ```
+
+Kita sudah menambahkan _form_ transaksi baru. Coba jalankan server dan tambahkan beberapa data transaksi baru. Seharusnya kamu dapat melihat data yang ditambahkan pada halaman utama aplikasi.
 
 ---
 
