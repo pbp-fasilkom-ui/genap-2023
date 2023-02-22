@@ -98,7 +98,7 @@ Catatan: Pada tutorial ini, kamu akan menggunakan proyek yang sudah kamu buat pa
 3. Lakukanlah migrasi dengan perintah `python manage.py makemigrations` dan `python manage.py migrate` pada Terminal atau Command Prompt untuk mengaplikasikan perubahan model yang telah dilakukan pada langkah sebelumnya.
 
 4. Buatlah _file_ baru pada folder `money_tracker` dengan nama `forms.py` untuk membuat struktur _form_ yang dapat menerima data transaksi baru. Tambahkan kode berikut ke dalam _file_ `forms.py`.
-    
+
     ```python
     from django.forms import ModelForm
     from money_tracker.models import TransactionRecord
@@ -109,7 +109,7 @@ Catatan: Pada tutorial ini, kamu akan menggunakan proyek yang sudah kamu buat pa
             fields = ["name", "type", "amount", "description"]
     ```
 
-5.  Kemudian, bukalah _file_ `views.py` yang ada pada folder `money_tracker` dan tambahkan  _import_ `HttpResponseRedirect`, `TransactionRecordForm`, dan `reverse` pada bagian paling atas.
+5. Kemudian, bukalah _file_ `views.py` yang ada pada folder `money_tracker` dan tambahkan  _import_ `HttpResponseRedirect`, `TransactionRecordForm`, dan `reverse` pada bagian paling atas.
 
     ```python
     from django.http import HttpResponseRedirect
