@@ -11,18 +11,27 @@ Pada tugas ini, kamu akan mengimplementasikan konsep Model-View-Template serta b
 Adapun pada tugas ini, kamu diminta untuk:
 
 1. Membuat sebuah aplikasi baru pada proyek tersebut bernama `study_tracker`.
+
 2. Melakukan `routing` pada `django_project` agar dapat menjalankan aplikasi `study_tracker`.
+
 3. Membuat model pada aplikasi `study_tracker` yang bernama `Assignment` dan memiliki atribut sebagai berikut.
+
     - `name` untuk nama tugas dengan tipe `CharField`,
     - `subject` untuk mata kuliah tugas dengan tipe `CharField`,
     - `date` untuk tenggat waktu tugas dengan tipe `DateTimeField`,
     - `progress` untuk indikator _progress_ tugas dengan tipe `IntegerField`,
     - `description` untuk deskripsi tugas dengan tipe `TextField`.
+
 4. Membuat sebuah fungsi pada `views.py` yang dapat melakukan pengambilan data dari model yang telah dibuat sebelumnya dan dikembalikan ke dalam sebuah HTML.
+
 5. Membuat sebuah routing pada `urls.py` aplikasi `study_tracker` untuk memetakan fungsi yang telah dibuat pada `views.py`.
+
 6. Memetakan data yang didapatkan ke dalam HTML dengan sintaks dari Django untuk pemetaan data _template_ (dapat menggunakan _template_ yang diberikan pada tutorial 1, namun sesuaikan atribut data sesuai dengan model yang telah dibuat).
+
 7. Melakukan `deployment` ke Railway terhadap aplikasi yang sudah dibuat sehingga nantinya dapat diakses oleh teman-temanmu melalui Internet.
-8. Membuat sebuah `README.md` yang berisi link menuju aplikasi Heroku yang sudah di-_deploy_ serta jawaban dari beberapa pertanyaan berikut.
+
+8. Membuat sebuah `README.md` yang berisi tautan menuju aplikasi Railway yang sudah di-_deploy_ (jika dapat di-_deploy_) serta jawaban dari beberapa pertanyaan berikut.
+
     - Buatlah bagan yang berisi _request client_ ke web aplikasi berbasis Django beserta responnya dan jelaskan pada bagan tersebut kaitan antara `urls.py`, `views.py`, `models.py`, dan berkas `html`.
     - Jelaskan kenapa menggunakan _virtual environment_? Apakah kita tetap dapat membuat aplikasi web berbasis Django tanpa menggunakan _virtual environment_?
     - Jelaskan bagaimana cara kamu mengimplementasikan poin 1 sampai dengan 4 di atas.
