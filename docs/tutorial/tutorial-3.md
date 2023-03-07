@@ -1,4 +1,4 @@
-# Lab 3: Autentikasi, Session, dan Cookie
+# Tutorial 3: Autentikasi, Session, dan Cookie
 
 Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu Komputer Universitas Indonesia, Semester Genap 2022/2023
 
