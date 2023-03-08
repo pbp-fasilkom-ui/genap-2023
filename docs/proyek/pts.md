@@ -1,4 +1,4 @@
-# Proyek Tengah Semester PBP
+# Proyek Tengah Semester
 
 **Membuat Situs Web menggunakan _Framework_ Django secara Berkelompok**
 
