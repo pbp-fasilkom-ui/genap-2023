@@ -31,10 +31,10 @@ Selamat mengerjakan. 😃
 
 Setiap anggota kelompok wajib mengimplementasikan sebuah modul.
 
-1. Menerapkan models dengan membuat, memanfaatkan yang sudah disediakan Django, atau memanfaatkan yang sudah dibuat oleh anggota kelompok (pada modul lain).
-2. Menerapkan views untuk memproses request dan mengolah data untuk menghasilkan respons menggunakan templat HTML maupun mengembalikan respon JSON.
-3. Menerapkan templates menggunakan responsive framework (contohnya Bootstrap atau Tailwind).
-4. Memiliki halaman form yang dapat menerima masukan dari pengguna dan kemudian diproses oleh views. Contoh pemrosesan oleh views adalah insert ke dalam model, query dari model, dan update data di dalam model.
+1. Menerapkan _models_ dengan membuat, memanfaatkan yang sudah disediakan Django, atau memanfaatkan yang sudah dibuat oleh anggota kelompok (pada modul lain).
+2. Menerapkan _views_ untuk memproses _request_ dan mengolah data untuk menghasilkan respons menggunakan templat HTML maupun mengembalikan respon JSON.
+3. Menerapkan templat menggunakan _responsive_ framework (seperti Bootstrap dan Tailwind).
+4. Memiliki halaman form yang dapat menerima masukan dari pengguna kemudian diproses oleh _views_. Contoh pemrosesan oleh _views_ adalah _insert_ ke dalam _model_, _query_ dari _model_, dan _update_ data di dalam model.
 5. Menerapkan JavaScript dengan pemanggilan AJAX.
 6. Menerapkan filter informasi bagi pengguna yang sudah login saja. Contohnya adalah data alamat, umur, dan nomor handphone hanya dapat dilihat oleh pengguna yang sudah login saja.
 
