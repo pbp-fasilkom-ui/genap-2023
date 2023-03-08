@@ -62,8 +62,10 @@ nav:
     - Tutorial 2: tutorial/tutorial-2.md
     - Tutorial 3: tutorial/tutorial-3.md
     - Tutorial 4: tutorial/tutorial-4.md
-  - Tugas:
+  - Tugas Individu:
     - Tugas 1: tugas/tugas-1.md
     - Tugas 2: tugas/tugas-2.md
     - Tugas 3: tugas/tugas-3.md
     - Tugas 4: tugas/tugas-4.md
+  - Tugas Kelompok:
+    - Proyek Tengah Semester: proyek/pts.md
