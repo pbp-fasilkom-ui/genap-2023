@@ -1,4 +1,4 @@
-# Tugas 5: Web Design Using HTML, CSS, and CSS Framework
+# Tugas 5: Desain Web Menggunakan HTML, CSS, dan Framework CSS
 
 Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu Komputer Universitas Indonesia, Semester Genap 2022/2023
 
