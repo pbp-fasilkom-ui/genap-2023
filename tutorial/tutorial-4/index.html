@@ -1,0 +1,1451 @@
+
+<!doctype html>
+<html lang="id" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Situs Web Pemrograman Berbasis Platform Genap 2022/2023">
+      
+      
+        <meta name="author" content="PBP Fasilkom UI">
+      
+      
+      
+        <link rel="prev" href="../tutorial-3/">
+      
+      
+        <link rel="next" href="../tutorial-5/">
+      
+      <link rel="icon" href="../../assets/img/logo.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.3">
+    
+    
+      
+        <title>Tutorial 4 - PBP Genap 2022/2023</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.c4a75a56.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-green" data-md-color-accent="deep-orange">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tutorial-4-metode-update-dan-delete-pada-data-web-design-menggunakan-html-dan-css3" class="md-skip">
+          Lewati ke isi
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="PBP Genap 2022/2023" class="md-header__button md-logo" aria-label="PBP Genap 2022/2023" data-md-component="logo">
+      
+  <img src="../../assets/img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PBP Genap 2022/2023
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tutorial 4
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="light-green" data-md-color-accent="deep-orange"  aria-label="Beralih ke mode gelap"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Beralih ke mode gelap" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="light-green" data-md-color-accent="deep-orange"  aria-label="Beralih ke mode terang"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Beralih ke mode terang" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cari" placeholder="Cari" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cari">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Kosongkan" aria-label="Kosongkan" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Mempersiapkan pencarian
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tab" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        Beranda
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../tutorial-1/" class="md-tabs__link md-tabs__link--active">
+        Tutorial
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../tugas/tugas-1/" class="md-tabs__link">
+        Tugas Individu
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../proyek/pts/" class="md-tabs__link">
+        Tugas Kelompok
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigasi" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="PBP Genap 2022/2023" class="md-nav__button md-logo" aria-label="PBP Genap 2022/2023" data-md-component="logo">
+      
+  <img src="../../assets/img/logo.png" alt="logo">
+
+    </a>
+    PBP Genap 2022/2023
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../..">Beranda</a>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Beranda
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Tutorial
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorial
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial-1/" class="md-nav__link">
+        Tutorial 1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial-2/" class="md-nav__link">
+        Tutorial 2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial-3/" class="md-nav__link">
+        Tutorial 3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Tutorial 4
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Tutorial 4
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Daftar isi">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Daftar isi
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tujuan-pembelajaran" class="md-nav__link">
+    Tujuan Pembelajaran
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pengenalan-html" class="md-nav__link">
+    Pengenalan HTML
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pengenalan-css" class="md-nav__link">
+    Pengenalan CSS
+  </a>
+  
+    <nav class="md-nav" aria-label="Pengenalan CSS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apa-itu-css" class="md-nav__link">
+    Apa itu CSS?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cara-penulisan-css" class="md-nav__link">
+    Cara Penulisan CSS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#catatan-tambahan" class="md-nav__link">
+    Catatan Tambahan
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#static-files-pada-django" class="md-nav__link">
+    Static files pada Django
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selector-pada-css" class="md-nav__link">
+    Selector pada CSS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips-trik-untuk-css" class="md-nav__link">
+    Tips &amp; Trik untuk CSS
+  </a>
+  
+    <nav class="md-nav" aria-label="Tips &amp; Trik untuk CSS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mengenal-combinators" class="md-nav__link">
+    Mengenal Combinators
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mengenal-css-pseudo-class" class="md-nav__link">
+    Mengenal CSS Pseudo-class
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#perbedaan-margin-border-dan-padding" class="md-nav__link">
+    Perbedaan Margin, Border dan Padding
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pengenalan-bootstrap" class="md-nav__link">
+    Pengenalan Bootstrap
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#responsive-web-design" class="md-nav__link">
+    Responsive Web Design
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorial-menambahkan-bootstrap-pada-aplikasi-money-tracker" class="md-nav__link">
+    Tutorial: Menambahkan Bootstrap pada Aplikasi Money Tracker
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorial-menambahkan-navbar-pada-keseluruhan-laman-aplikasi" class="md-nav__link">
+    Tutorial: Menambahkan Navbar pada Keseluruhan Laman Aplikasi
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorial-membuat-fungsi-untuk-memperbarui-data-transaksi" class="md-nav__link">
+    Tutorial: Membuat Fungsi untuk Memperbarui Data Transaksi
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorial-membuat-fungsi-untuk-menghapus-data-transaksi" class="md-nav__link">
+    Tutorial: Membuat Fungsi untuk Menghapus Data Transaksi
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referensi-tambahan" class="md-nav__link">
+    Referensi Tambahan
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#akhir-kata" class="md-nav__link">
+    Akhir Kata
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credits" class="md-nav__link">
+    Credits
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial-5/" class="md-nav__link">
+        Tutorial 5
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Tugas Individu
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Tugas Individu
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tugas/tugas-1/" class="md-nav__link">
+        Tugas 1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tugas/tugas-2/" class="md-nav__link">
+        Tugas 2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tugas/tugas-3/" class="md-nav__link">
+        Tugas 3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tugas/tugas-4/" class="md-nav__link">
+        Tugas 4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tugas/tugas-5/" class="md-nav__link">
+        Tugas 5
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Tugas Kelompok
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Tugas Kelompok
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../proyek/pts/" class="md-nav__link">
+        Proyek Tengah Semester
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Daftar isi">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Daftar isi
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tujuan-pembelajaran" class="md-nav__link">
+    Tujuan Pembelajaran
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pengenalan-html" class="md-nav__link">
+    Pengenalan HTML
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pengenalan-css" class="md-nav__link">
+    Pengenalan CSS
+  </a>
+  
+    <nav class="md-nav" aria-label="Pengenalan CSS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apa-itu-css" class="md-nav__link">
+    Apa itu CSS?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cara-penulisan-css" class="md-nav__link">
+    Cara Penulisan CSS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#catatan-tambahan" class="md-nav__link">
+    Catatan Tambahan
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#static-files-pada-django" class="md-nav__link">
+    Static files pada Django
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selector-pada-css" class="md-nav__link">
+    Selector pada CSS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips-trik-untuk-css" class="md-nav__link">
+    Tips &amp; Trik untuk CSS
+  </a>
+  
+    <nav class="md-nav" aria-label="Tips &amp; Trik untuk CSS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mengenal-combinators" class="md-nav__link">
+    Mengenal Combinators
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mengenal-css-pseudo-class" class="md-nav__link">
+    Mengenal CSS Pseudo-class
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#perbedaan-margin-border-dan-padding" class="md-nav__link">
+    Perbedaan Margin, Border dan Padding
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pengenalan-bootstrap" class="md-nav__link">
+    Pengenalan Bootstrap
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#responsive-web-design" class="md-nav__link">
+    Responsive Web Design
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorial-menambahkan-bootstrap-pada-aplikasi-money-tracker" class="md-nav__link">
+    Tutorial: Menambahkan Bootstrap pada Aplikasi Money Tracker
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorial-menambahkan-navbar-pada-keseluruhan-laman-aplikasi" class="md-nav__link">
+    Tutorial: Menambahkan Navbar pada Keseluruhan Laman Aplikasi
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorial-membuat-fungsi-untuk-memperbarui-data-transaksi" class="md-nav__link">
+    Tutorial: Membuat Fungsi untuk Memperbarui Data Transaksi
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorial-membuat-fungsi-untuk-menghapus-data-transaksi" class="md-nav__link">
+    Tutorial: Membuat Fungsi untuk Menghapus Data Transaksi
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referensi-tambahan" class="md-nav__link">
+    Referensi Tambahan
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#akhir-kata" class="md-nav__link">
+    Akhir Kata
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credits" class="md-nav__link">
+    Credits
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="tutorial-4-metode-update-dan-delete-pada-data-web-design-menggunakan-html-dan-css3">Tutorial 4: Metode Update dan Delete pada Data &amp; Web Design Menggunakan HTML dan CSS3</h1>
+<p>Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu Komputer Universitas Indonesia, Semester Genap 2022/2023</p>
+<hr />
+<h2 id="tujuan-pembelajaran">Tujuan Pembelajaran</h2>
+<p>Setelah menyelesaikan tutorial ini, mahasiswa diharapkan untuk dapat:</p>
+<ul>
+<li>Memahami konsep <em>update</em> dan <em>delete</em></li>
+<li>Memahami cara <em>update</em> dan <em>delete</em> pada Django</li>
+<li>Memahami susunan tag pada HTML5</li>
+<li>Mengetahui berbagai jenis tag HTML5</li>
+<li>Memahami sintaks penulisan CSS</li>
+<li>Memahami konsep <em>static files</em> pada Django</li>
+<li>Memahami penggunaan <em>selector</em> pada CSS</li>
+</ul>
+<h2 id="pengenalan-html">Pengenalan HTML</h2>
+<p>Silakan pelajari dan mencoba sendiri HTML pada referensi <a href="https://www.w3schools.com/html/default.asp">ini</a>.</p>
+<p>Perbedaan antara HTML dan HTML5 bisa kamu baca pada referensi <a href="https://www.geeksforgeeks.org/difference-between-html-and-html5/">ini</a>.</p>
+<h2 id="pengenalan-css">Pengenalan CSS</h2>
+<h3 id="apa-itu-css">Apa itu CSS?</h3>
+<p>Cascading Style Sheets (CSS) adalah bahasa yang digunakan untuk mendeskripsikan tampilan dan format dari sebuah situs web yang ditulis pada <em>markup language</em> (seperti HTML). Kegunaannya menjadikan tampilan situs web lebih menarik.</p>
+<p>Untuk mempelajari perbedaan antara CSS dan CSS3 bisa kamu baca pada referensi <a href="https://www.geeksforgeeks.org/difference-between-css-and-css3/">ini</a>.</p>
+<h3 id="cara-penulisan-css">Cara Penulisan CSS</h3>
+<p>Secara umum, CSS dapat dituliskan dalam bentuk sebagai berikut.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">selector</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="n">properties</span><span class="p">:</span><span class="w"> </span><span class="n">value</span><span class="p">;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">}</span>
+</code></pre></div>
+<p>Silakan pelajari dan mencoba sendiri CSS pada referensi <a href="https://www.w3schools.com/css/">ini</a>.</p>
+<p>Terdapat tiga jenis cara penulisan CSS:</p>
+<ol>
+<li><strong>Inline Styles</strong></li>
+<li><strong>Internal Style Sheet</strong></li>
+<li><strong>External Style Sheet</strong></li>
+</ol>
+<p>Silakan pelajari tentang ketiga jenis CSS tersebut pada referensi <a href="https://www.geeksforgeeks.org/types-of-css-cascading-style-sheet/">ini</a>.</p>
+<p>Perlu diperhatikan, jika kamu membuat jenis External Style Sheet, kamu perlu menambahkan tag <code>{% load staticfiles %}</code> pada halaman HTML kamu. Contohnya seperti potongan kode di bawah ini.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>{% load staticfiles %}
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Tutorial CSS Yay<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{% static &#39;css/tutorial.css&#39; %}&quot;</span> <span class="p">/&gt;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>      <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Tutorial CSS Yay<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;main&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>      <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>published: 04 Oktober 2021<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">&gt;</span>Tutorial CSS ku<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Yay ini tutorial yang gampang!<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Hal ini dapat terjadi karena CSS merupakan <em>static files</em> di Django. <em>Static files</em> akan dijelaskan pada bagian selanjutnya.</p>
+<h3 id="catatan-tambahan">Catatan Tambahan</h3>
+<p>Jika terdapat lebih dari satu <em>style</em> yang didefinisikan untuk suatu elemen, maka <em>style</em> yang akan diterapkan adalah yang memiliki prioritas yang lebih tinggi. Berikut ini urutan prioritasnya, nomor 1 yang memiliki prioritas paling tinggi.</p>
+<ol>
+<li>Inline style</li>
+<li>External dan internal style sheets</li>
+<li>Browser default</li>
+</ol>
+<h2 id="static-files-pada-django">Static files pada Django</h2>
+<p>Pada <em>framework</em> Django, terdapat file-file yang disebut dengan <em>static files</em>. <em>Static files</em> merupakan file-file pendukung HTML pada suatu situs web. Contoh <em>static files</em> antara lain seperti CSS, JavaScript dan gambar. Pengaturan untuk <em>static files</em> terletak pada file <code>settings.py</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>  <span class="o">...</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  <span class="c1"># Static files (CSS, JavaScript, Images)</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>  <span class="c1"># httpsdocs.djangoproject.comen1.9howtostatic-files</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>  <span class="n">STATIC_ROOT</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">PROJECT_ROOT</span><span class="p">,</span> <span class="s1">&#39;static&#39;</span><span class="p">)</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>  <span class="n">STATIC_URL</span> <span class="o">=</span> <span class="s1">&#39;static&#39;</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>  <span class="o">...</span>
+</code></pre></div>
+<p>Pada <code>settings.py</code>, terdapat <code>STATIC_ROOT</code> yang menentukan <em>absolute path</em> ke direktori <em>static files</em> ketika menjalankan perintah <code>collectstatic</code> pada proyek dan terdapat <code>STATIC_URL</code> yang merupakan URL yang dapat diakses publik untuk memperoleh <em>static files</em> tersebut.</p>
+<p>Perintah <code>collectstatic</code> adalah perintah untuk mengumpulkan <em>static files</em> dari semua app sehingga mempermudah akses untuk semua app.</p>
+<p>Penjelasan lebih lengkap mengenai <em>static files</em> dapat kamu baca pada referensi <a href="https://docs.djangoproject.com/en/4.1/ref/contrib/staticfiles/">ini</a>.</p>
+<h2 id="selector-pada-css">Selector pada CSS</h2>
+<p>Pada bagian ini kamu akan mempelajari 3 buah <em>selector</em> pada CSS, yaitu <em>element selector</em>, <em>class selector</em>, dan <em>ID selector</em>.</p>
+<ol>
+<li>
+<p>Element Selector</p>
+<p><em>Element selector</em> menggunakan tag HTML sebagai <em>selector</em> untuk mengubah properti yang terdapat dalam tag tersebut.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">h1</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#fca205</span><span class="p">;</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Monospace&quot;</span><span class="p">;</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="k">font-style</span><span class="p">:</span><span class="w"> </span><span class="kc">italic</span><span class="p">;</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="p">}</span>
+</code></pre></div>
+</li>
+<li>
+<p>ID Selector</p>
+<p><em>ID selector</em> menggunakan ID pada tag sebagai <em>selector</em>-nya.</p>
+<p>Kamu dapat menambahkan ID pada templat HTML sebagai berikut (ID harus bersifat unik).</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="o">...</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="o">&lt;</span><span class="nt">body</span><span class="o">&gt;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="o">&lt;</span><span class="nt">div</span><span class="w"> </span><span class="nt">id</span><span class="o">=</span><span class="s2">&quot;header&quot;</span><span class="o">&gt;</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="o">&lt;</span><span class="nt">h1</span><span class="o">&gt;</span><span class="nt">Tutorial</span><span class="w"> </span><span class="nt">CSS</span><span class="w"> </span><span class="nt">Yay</span><span class="o">&lt;/</span><span class="nt">h1</span><span class="o">&gt;</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">  </span><span class="o">&lt;/</span><span class="nt">div</span><span class="o">&gt;</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">  </span><span class="o">...</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="o">&lt;/</span><span class="nt">body</span><span class="o">&gt;</span>
+</code></pre></div>
+<p>Kemudian tambahkan ID tersebut sebagai <em>selector</em> pada file CSS kamu.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">#</span><span class="nn">header</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#f0f0f0</span><span class="p">;</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="k">margin-top</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="w"> </span><span class="mi">40</span><span class="kt">px</span><span class="p">;</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="p">}</span>
+</code></pre></div>
+<p>Dapat dilihat perubahan tampilan yang terjadi. Silakan menambahkan <em>ID selector</em> lain untuk mengubah properti lainnya.</p>
+</li>
+<li>
+<p>Class Selector</p>
+<p>Selanjutnya, class selector yang dapat digunakan untuk memperindah tampilan templat HTML.
+Tambahkan beberapa class pada tag HTML</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>...
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;main&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;content_section&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>        <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;date&quot;</span><span class="p">&gt;</span>published: 28 September 2022<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>        <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">&gt;</span>Tutorial CSS ku<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>        <span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;content_1&quot;</span><span class="p">&gt;</span>Yay ini tutorial yang gampang!<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;content_section&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>        <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;date &quot;</span><span class="p">&gt;</span>published: 29 September 2022<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>        <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">&gt;</span>Tutorial CSS mu<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>        <span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;content_2&quot;</span><span class="p">&gt;</span>Yay ini tutorial yang mudah!<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;content_section&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>published: 30 September 2022<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>        <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">&gt;</span>Tutorial CSS semua<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>        <span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;content_3&quot;</span><span class="p">&gt;</span>Yay ini tutorial yang tidak sulit!<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>...
+</code></pre></div>
+<p>Kemudian taambahkan <em>class selector</em> berikut pada file CSS kamu.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">.</span><span class="nc">content_section</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#3696e1</span><span class="p">;</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span><span class="k">margin-bottom</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="kt">px</span><span class="p">;</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#000000</span><span class="p">;</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">  </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="kc">cursive</span><span class="p">;</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="w"> </span><span class="mi">40</span><span class="kt">px</span><span class="p">;</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="p">}</span>
+</code></pre></div>
+<p>Silakan menambahkan <em>class selector</em> lain untuk mengubah properti lainnya.</p>
+</li>
+</ol>
+<p>Perbedaan penulisan <em>ID selector</em> dan <em>class selector</em> adalah <em>ID selector</em> menggunakan format <code>#[id_name]</code> (selalu diawali <code>#</code>) sedangkan <em>class selector</em> menggunakan format <code>.[class_name]</code> (diawali <code>.</code>).</p>
+<p>Untuk memperdalam pengetahuan mengenai <em>CSS Selector Reference</em>, kamu dapat membaca referensi <a href="https://www.w3schools.com/cssref/css_selectors.asp">ini</a>.</p>
+<h2 id="tips-trik-untuk-css">Tips &amp; Trik untuk CSS</h2>
+<h3 id="mengenal-combinators">Mengenal Combinators</h3>
+<p>Setelah mengetahui <em>selector</em> pada CSS, kamu dapat mengenal <em>combinators</em> pada CSS. <em>Combinators</em> adalah suatu penanda yang menandakan hubungan antar elemen, <em>class</em>, atau ID pada CSS.</p>
+<p>Terdapat empat <em>combinators</em> pada CSS.</p>
+<ol>
+<li>Descendant selector (<em>space</em>)</li>
+<li>Child selector (&gt;)</li>
+<li>Adjacent sibling selector (+)</li>
+<li>General sibling selector (~)</li>
+</ol>
+<p>Silakan pelajari keempat jenis <em>combinators</em> tersebut CSS tersebut pada referensi <a href="https://www.w3schools.com/css/css_combinators.asp">ini</a>.</p>
+<h3 id="mengenal-css-pseudo-class">Mengenal CSS Pseudo-class</h3>
+<p><em>Pseudo-class</em> digunakan untuk mendefinisikan <em>state</em> khusus dari sebuah elemen. Contoh beberapa <em>pseudo-class</em> adalah sebagai berikut.</p>
+<ul>
+<li><strong>:active</strong> memilih elemen yang sedang aktif</li>
+<li><strong>:checked</strong> memilih elemen yang telah dicentang</li>
+<li><strong>:disabled</strong> memilih elemen yang telah dinonaktifkan</li>
+<li><strong>:enabled</strong> memilih elemen yang telah diaktifkan</li>
+<li><strong>:link</strong> memilih tautan yang belum pernah dikunjungi</li>
+<li><strong>:hover</strong> memilih elemen pada saat kursor berada diatasnya</li>
+<li><strong>:visited</strong> memilih link yang sudah pernah dikunjungi</li>
+</ul>
+<p>Umumnya <em>pseudo-class</em> dituliskan dalam bentuk sebagai berikut.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nt">selector</span><span class="p">:</span><span class="nd">pseudo-class</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="n">properties</span><span class="p">:</span><span class="w"> </span><span class="n">value</span><span class="p">;</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="p">}</span>
+</code></pre></div>
+<h3 id="perbedaan-margin-border-dan-padding">Perbedaan Margin, Border dan Padding</h3>
+<p>Kamu dapat melihat perbedaan <em>margin</em>, <em>border</em>, dan <em>padding</em> pada referensi <a href="https://www.w3schools.com/css/css_boxmodel.asp">ini</a>.</p>
+<h2 id="pengenalan-bootstrap">Pengenalan Bootstrap</h2>
+<p>Terdapat banyak <em>framework</em> CSS yang sering digunakan sekarang ini, salah satunya adalah Bootstrap CSS. Bootstrap CSS menyediakan <em>class</em>-<em>class</em> yang sering digunakan dalam pengembangan suatu situs web. <em>Class</em>-<em>class</em> yang disediakan seperti <em>navbar</em>, <em>card</em>, <em>footer</em>, <em>carousel</em>, dan lain-lain. Selain itu, Bootstrap CSS juga menyediakan banyak fitur yang berguna. Salah satu fitur yang berguna pada Bootstrap CSS adalah <em>grid system</em> yang berguna untuk membagi halaman situs web menjadi lebih mudah dan menarik.</p>
+<p>Untuk mempelajari lebih lanjut mengenai Bootstrap CSS, kamu dapat membaca referensi <a href="https://getbootstrap.com/docs/5.2/getting-started/introduction/">ini</a>.</p>
+<h2 id="responsive-web-design">Responsive Web Design</h2>
+<p><em>Responsive web design</em> merupakan metode atau pendekatan sistem desain web yang bertujuan untuk memberikan tampilan situs web yang terlihat baik pada semua perangkat (baik pada komputer meja, tablet, atau ponsel). <em>Responsive web design</em> tidak mengubah konten yang ada pada situs web, melainkan hanya mengubah cara penyajian pada setiap perangkat agar sesuai dengan ukuran layar dan perilaku perangkat masing-masing. <em>Responsive web design</em> menggunakan CSS untuk mengubah ukuran (seperti menyusutkan dan membesarkan) suatu elemen.</p>
+<p>Untuk mengecek penerapan <em>responsive web design</em> pada suatu situs web, kamu dapat mengakses situs web tersebut dan membuka fitur <code>Toggle Device Mode</code> pada browser.</p>
+<p>Berikut adalah <em>keyboard shortcut</em> untuk mengakes fitur tersebut pada browser Google Chrome.</p>
+<ul>
+<li>Windows/Linux : <code>CTRL + SHIFT + M</code></li>
+<li>Mac : <code>Command + Shift + M</code></li>
+</ul>
+<p>Untuk mempelajari lebih lengkap mengenai Reponsive Web Design, kamu dapat membuka referensi <a href="https://web.dev/responsive-web-design-basics/">ini</a>.</p>
+<h2 id="tutorial-menambahkan-bootstrap-pada-aplikasi-money-tracker">Tutorial: Menambahkan Bootstrap pada Aplikasi Money Tracker</h2>
+<p>Berikut adalah hal yang perlu kamu lakukan untuk menyelesaikan bagian tutorial ini.</p>
+<ol>
+<li>
+<p>Menambahkan barisan kode yang dibutuhkan agar aplikasi kamu dapat menggunakan Bootstrap.</p>
+<blockquote>
+<p>Silakan merujuk kepada informasi pada laman <a href="https://getbootstrap.com/docs/5.2/getting-started/introduction/">ini</a>.</p>
+</blockquote>
+</li>
+<li>
+<p>Silakan lakukan modifikasi pada tampilan aplikasi <code>money_tracker</code> kamu sekreatif mungkin dengan menggunakan Bootstrap.</p>
+</li>
+</ol>
+<h2 id="tutorial-menambahkan-navbar-pada-keseluruhan-laman-aplikasi">Tutorial: Menambahkan Navbar pada Keseluruhan Laman Aplikasi</h2>
+<p>Tambahkan <em>navigation bar</em> (boleh menggunakan Bootstrap) pada halaman <code>tracker.html</code> kamu dan tampilkan <strong>nama kamu</strong> dan <strong>tombol <em>logout</em></strong> pada <em>navigation bar</em> yang kamu buat.</p>
+<h2 id="tutorial-membuat-fungsi-untuk-memperbarui-data-transaksi">Tutorial: Membuat Fungsi untuk Memperbarui Data Transaksi</h2>
+<p>Berikut adalah yang perlu kamu lakukan untuk menyelesaikan bagian tutorial ini.</p>
+<ol>
+<li>
+<p>Buat fungsi baru dengan nama <code>modify_transaction</code> yang menerima parameter <code>request</code> dan <code>id</code> pada <code>views.py</code> di folder <code>money_tracker</code> untuk melakukan perbaruan data transaksi. Kamu dapat menggunakan templat kode berikut untuk memuat fungsinya.</p>
+<blockquote>
+<p>Jangan lupa untuk memahami isi kodenya, ya. 😉</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">def</span> <span class="nf">modify_transaction</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="nb">id</span><span class="p">):</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    <span class="c1"># Get data berdasarkan ID</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    <span class="n">transaction</span> <span class="o">=</span> <span class="n">TransactionRecord</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">pk</span> <span class="o">=</span> <span class="nb">id</span><span class="p">)</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>    <span class="c1"># Set instance pada form dengan data dari transaction</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>    <span class="n">form</span> <span class="o">=</span> <span class="n">TransactionRecordForm</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">POST</span> <span class="ow">or</span> <span class="kc">None</span><span class="p">,</span> <span class="n">instance</span><span class="o">=</span><span class="n">transaction</span><span class="p">)</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>    <span class="k">if</span> <span class="n">form</span><span class="o">.</span><span class="n">is_valid</span><span class="p">()</span> <span class="ow">and</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s2">&quot;POST&quot;</span><span class="p">:</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>        <span class="c1"># Simpan form dan kembali ke halaman awal</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>        <span class="n">form</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>        <span class="k">return</span> <span class="n">HttpResponseRedirect</span><span class="p">(</span><span class="n">reverse</span><span class="p">(</span><span class="s1">&#39;money_tracker:show_tracker&#39;</span><span class="p">))</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>    <span class="n">context</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;form&#39;</span><span class="p">:</span> <span class="n">form</span><span class="p">}</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s2">&quot;modify_transaction.html&quot;</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
+</code></pre></div>
+</li>
+<li>
+<p>Buka <code>urls.py</code> yang ada pada folder <code>money_tracker</code> dan impor fungsi yang sudah kamu buat tadi.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kn">from</span> <span class="nn">money_tracker.views</span> <span class="kn">import</span> <span class="n">modify_transaction</span>
+</code></pre></div>
+</li>
+<li>
+<p>Tambahkan <em>path url</em> ke dalam <code>urlpatterns</code> untuk mengakses fungsi yang sudah diimpor tadi.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="o">...</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="n">path</span><span class="p">(</span><span class="s1">&#39;modify/&lt;int:id&gt;&#39;</span><span class="p">,</span> <span class="n">modify_transaction</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;modify_transaction&#39;</span><span class="p">),</span> <span class="c1">#sesuaikan dengan nama fungsi yang dibuat</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="o">...</span>
+</code></pre></div>
+</li>
+<li>
+<p>Buatlah sebuah berkas baru pada folder <code>money_tracker/templates</code> dengan nama <code>modify_transaction.html</code>. Kemudian, isilah file tersebut dengan templat berikut ini.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>{% extends &#39;base.html&#39; %}
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>{% load static %}
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>{% block content %}
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Ubah Data Transaksi<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="p">&lt;</span><span class="nt">form</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;POST&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>    {% csrf_token %}
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>    <span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>        {{ form.as_table }}
+<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>                <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;Ubah&quot;</span><span class="p">/&gt;</span>
+<a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a>            <span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a>        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a>    <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+<a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+<a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a>
+<a id="__codelineno-12-22" name="__codelineno-12-22" href="#__codelineno-12-22"></a>{% endblock %}
+</code></pre></div>
+</li>
+<li>
+<p>Bukalah berkas <code>tracker.html</code> yang ada pada folder <code>money_tracker/templates</code> dan ubahlah kode yang sudah ada menjadi seperti berikut agar terdapat tombol ubah untuk setiap transaksi.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>        <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Nama<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>        <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Jenis<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>        <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Jumlah<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>        <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Tanggal<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>        <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Deskripsi<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>        <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Aksi<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>    {% comment %} Tambahkan data di bawah baris ini {% endcomment %}
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>    {% for transaction in list_of_transactions %}
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>{{transaction.name}}<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>{{transaction.type}}<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>{{transaction.amount}}<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a>            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>{{transaction.date}}<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a>            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>{{transaction.description}}<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a>            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a>                <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{% url &#39;money_tracker:modify_transaction&#39; transaction.pk %}&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a>                    <span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-13-21" name="__codelineno-13-21" href="#__codelineno-13-21"></a>                        Ubah
+<a id="__codelineno-13-22" name="__codelineno-13-22" href="#__codelineno-13-22"></a>                    <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-13-23" name="__codelineno-13-23" href="#__codelineno-13-23"></a>                <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<a id="__codelineno-13-24" name="__codelineno-13-24" href="#__codelineno-13-24"></a>            <span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-13-25" name="__codelineno-13-25" href="#__codelineno-13-25"></a>        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-13-26" name="__codelineno-13-26" href="#__codelineno-13-26"></a>    {% endfor %}
+<a id="__codelineno-13-27" name="__codelineno-13-27" href="#__codelineno-13-27"></a><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+<a id="__codelineno-13-28" name="__codelineno-13-28" href="#__codelineno-13-28"></a>...
+</code></pre></div>
+</li>
+</ol>
+<h2 id="tutorial-membuat-fungsi-untuk-menghapus-data-transaksi">Tutorial: Membuat Fungsi untuk Menghapus Data Transaksi</h2>
+<p>Berikut adalah yang perlu kamu lakukan untuk membuat fungsi penghapusan data transaksi.</p>
+<ol>
+<li>
+<p>Buat fungsi baru dengan nama <code>delete_transaction</code> yang menerima parameter <code>request</code> dan <code>id</code> pada <code>views.py</code> di folder <code>money_tracker</code> untuk melakukan <em>delete</em> data transaksi. Kamu dapat menggunakan templat kode berikut untuk memuat fungsinya.</p>
+<blockquote>
+<p>Jangan lupa untuk memahami isi kodenya, ya. 😉</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">def</span> <span class="nf">delete_transaction</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="nb">id</span><span class="p">):</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>    <span class="c1"># Get data berdasarkan ID</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>    <span class="n">transaction</span> <span class="o">=</span> <span class="n">TransactionRecord</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">pk</span> <span class="o">=</span> <span class="nb">id</span><span class="p">)</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>    <span class="c1"># Hapus data</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>    <span class="n">transaction</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>    <span class="c1"># Kembali ke halaman awal</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>    <span class="k">return</span> <span class="n">HttpResponseRedirect</span><span class="p">(</span><span class="n">reverse</span><span class="p">(</span><span class="s1">&#39;money_tracker:show_tracker&#39;</span><span class="p">))</span>
+</code></pre></div>
+</li>
+<li>
+<p>Buka <code>urls.py</code> yang ada pada folder <code>money_tracker</code> dan impor fungsi yang sudah kamu buat tadi.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kn">from</span> <span class="nn">money_tracker.views</span> <span class="kn">import</span> <span class="n">delete_transaction</span>
+</code></pre></div>
+</li>
+<li>
+<p>Tambahkan <em>path url</em> ke dalam <code>urlpatterns</code> untuk mengakses fungsi yang sudah diimpor tadi.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="o">...</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="n">path</span><span class="p">(</span><span class="s1">&#39;delete/&lt;int:id&gt;&#39;</span><span class="p">,</span> <span class="n">delete_transaction</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;delete_transaction&#39;</span><span class="p">),</span> <span class="c1">#sesuaikan dengan nama fungsi yang dibuat</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="o">...</span>
+</code></pre></div>
+</li>
+<li>
+<p>Bukalah berkas <code>tracker.html</code> yang ada pada folder <code>money_tracker/templates</code> dan ubahlah kode yang sudah ada menjadi seperti berikut agar terdapat tombol hapus untuk setiap transaksi.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>        <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Nama<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>        <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Jenis<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>        <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Jumlah<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>        <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Tanggal<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>        <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Deskripsi<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>        <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Aksi<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a>    {% comment %} Tambahkan data di bawah baris ini {% endcomment %}
+<a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a>    {% for transaction in list_of_transactions %}
+<a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a>        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a>            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>{{transaction.name}}<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a>            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>{{transaction.type}}<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a>            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>{{transaction.amount}}<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-17-16" name="__codelineno-17-16" href="#__codelineno-17-16"></a>            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>{{transaction.date}}<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-17-17" name="__codelineno-17-17" href="#__codelineno-17-17"></a>            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>{{transaction.description}}<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-17-18" name="__codelineno-17-18" href="#__codelineno-17-18"></a>            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-17-19" name="__codelineno-17-19" href="#__codelineno-17-19"></a>              <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{% url &#39;money_tracker:modify_transaction&#39; transaction.pk %}&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-17-20" name="__codelineno-17-20" href="#__codelineno-17-20"></a>                  <span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-17-21" name="__codelineno-17-21" href="#__codelineno-17-21"></a>                      Ubah
+<a id="__codelineno-17-22" name="__codelineno-17-22" href="#__codelineno-17-22"></a>                  <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-17-23" name="__codelineno-17-23" href="#__codelineno-17-23"></a>              <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<a id="__codelineno-17-24" name="__codelineno-17-24" href="#__codelineno-17-24"></a>              <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{% url &#39;money_tracker:delete_transaction&#39; transaction.pk %}&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-17-25" name="__codelineno-17-25" href="#__codelineno-17-25"></a>                  <span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-17-26" name="__codelineno-17-26" href="#__codelineno-17-26"></a>                      Hapus
+<a id="__codelineno-17-27" name="__codelineno-17-27" href="#__codelineno-17-27"></a>                  <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-17-28" name="__codelineno-17-28" href="#__codelineno-17-28"></a>              <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<a id="__codelineno-17-29" name="__codelineno-17-29" href="#__codelineno-17-29"></a>            <span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-17-30" name="__codelineno-17-30" href="#__codelineno-17-30"></a>        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-17-31" name="__codelineno-17-31" href="#__codelineno-17-31"></a>    {% endfor %}
+<a id="__codelineno-17-32" name="__codelineno-17-32" href="#__codelineno-17-32"></a><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+<a id="__codelineno-17-33" name="__codelineno-17-33" href="#__codelineno-17-33"></a>...
+</code></pre></div>
+</li>
+</ol>
+<p>Jalankan proyek Django-mu dan cobalah untuk menghapus data transaksi yang sudah ada pada browser favoritmu.</p>
+<h2 id="referensi-tambahan">Referensi Tambahan</h2>
+<ul>
+<li>Kamu dapat membuka tautan <a href="https://getbootstrap.com/docs/5.2/components/navbar/">ini</a> untuk melihat kode yang dapat kamu gunakan untuk menambahkan <em>navigation bar</em> dengan menggunakan Bootstrap.</li>
+<li>Kamu dapat membuka tautan <a href="https://www.w3schools.com/css/css_navbar.asp">ini</a> untuk melihat kode yang dapat kamu gunakan untuk menambahkan <em>navigation bar</em> dengan menggunakan CSS secara manual.</li>
+</ul>
+<h2 id="akhir-kata">Akhir Kata</h2>
+<p>Selamat! Kamu telah menyelesaikan Tutorial 4 dengan baik. 😄</p>
+<p>Seperti biasa, jangan lupa untuk melakukan <code>add</code>, <code>commit</code>, dan <code>push</code> perubahan yang sudah kamu lakukan untuk menyimpannya ke dalam repositori GitHub sebelum kamu menutup pekerjaan kamu. 😉</p>
+<h2 id="credits">Credits</h2>
+<p>Tutorial ini dikembangkan berdasarkan <a href="https://github.com/pbp-fasilkom-ui/ganjil-2023">PBP Ganjil 2023</a> yang ditulis oleh Tim Pengajar Pemrograman Berbasis Platform 2023. Segala tutorial serta instruksi yang dicantumkan pada repositori ini dirancang sedemikian rupa sehingga mahasiswa yang sedang mengambil mata kuliah Pemrograman Berbasis Platform dapat menyelesaikan tutorial saat sesi lab berlangsung.</p>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Pembaruan terakhir:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">15 Maret 2023 10:16:40</span>
+      
+        <br>
+        Dibuat:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">15 Maret 2023 10:16:40</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 PBP Fasilkom UI
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.annotate", "navigation.tabs", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Tersalin ke clipboard", "clipboard.copy": "Salin ke clipboard", "search.result.more.one": "1 lagi di halaman ini", "search.result.more.other": "# lagi di halaman ini", "search.result.none": "Tidak ada dokumen yang sesuai", "search.result.one": "1 dokumen ditemukan", "search.result.other": "# dokumen ditemukan", "search.result.placeholder": "Ketik untuk mulai pencarian", "search.result.term.missing": "Tidak ada", "select.version": "Pilih versi"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.efa0ade1.min.js"></script>
+      
+    
+  </body>
+</html>
