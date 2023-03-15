@@ -597,16 +597,6 @@ Seperti biasa, jangan lupa untuk melakukan `add`, `commit`, dan `push` perubahan
 
 ---
 
-## Referensi
-
-1. [JavaScript](https://www.w3schools.com/js/default.asp)
-2. [jQuery](https://www.w3schools.com/jquery/default.asp)
-3. [PBP-2017 Lab 6](https://gitlab.com/PPW-2017/ppw-lab/-/blob/master/lab_instruction/lab_6/README.md)
-4. [PBP-2021 Lab 5](https://gitlab.com/PBP-2021/pbp-lab/-/tree/master/lab_instruction/lab_5)
-5. [TheCatAPI](https://docs.thecatapi.com/)
-
----
-
 ## Credits
 
 Tutorial ini dikembangkan berdasarkan [PBP Ganjil 2023](https://github.com/pbp-fasilkom-ui/ganjil-2023) yang ditulis oleh Tim Pengajar Pemrograman Berbasis Platform 2023. Segala tutorial serta instruksi yang dicantumkan pada repositori ini dirancang sedemikian rupa sehingga mahasiswa yang sedang mengambil mata kuliah Pemrograman Berbasis Platform dapat menyelesaikan tutorial saat sesi lab berlangsung.
