@@ -504,8 +504,8 @@ Kamu diminta untuk menambahkan fungsionalitas AJAX ke projek `money_tracker` yan
                                     <p class="card-text">${result.amount}</p>
                                     <p class="card-text">${result.description}</p>
                                     <div class="mt-auto">
-                                        <a href="/tracker/delete/${data[i].pk}" class="btn btn-primary delete mb-2">Hapus</a>
-                                        <a href="/tracker/modify/${data[i].pk}" class="btn btn-secondary mb-2">Ubah</a>
+                                        <a href="/tracker/delete/${result.id}" class="btn btn-primary delete mb-2">Hapus</a>
+                                        <a href="/tracker/modify/${result.id}" class="btn btn-secondary mb-2">Ubah</a>
                                     </div>
                                 </div>
                             </div>
@@ -526,7 +526,7 @@ Kamu diminta untuk menambahkan fungsionalitas AJAX ke projek `money_tracker` yan
 
 ---
 
-## Extra Information: Web Storage
+## Materi Tambahan: Web Storage
 
 Dengan penyimpanan lokal, aplikasi web dapat menyimpan data secara lokal dalam browser pengguna. Hal ini berguna apabila anda menggunakan _framework front-end_ seperti React ataupun Vue, karena kemampuan penggunaan _cookies_ pada _framework-framework_ tersebut terbatas.
 Sebelum HTML5, data aplikasi harus disimpan dalam _cookies_ (termasuk dalam setiap permintaan server). Penyimpanan lokal bersifat lebih aman dan sejumlah besar data dapat disimpan secara lokal tanpa mempengaruhi kinerja situs web.
@@ -539,7 +539,7 @@ Terdapat 2 cara menyimpan data menggunakan web storage.
 
 - `window.sessionStorage` - menyimpan data untuk satu session (data hilang ketika tab browser ditutup)
 
-### localStorage Object
+### Obyek localStorage
 
 Objek `localStorage` menyimpan data tanpa tanggal kedaluwarsa. Data tidak akan dihapus ketika browser ditutup, dan akan tersedia pada hari berikutnya, minggu, atau tahun.
 
@@ -581,7 +581,7 @@ function clickCounter() {
 Apabila halaman tersebut dijalankan, ketika tombol ditekan maka terhitung jumlah _click_ akan bertambah.
 Ketika browser ditutup dan kita membuka kembali halaman sebelumnya, dapat dilihat bahwa perhitungan jumlah _click_ akan dilanjutkan dari yang sebelumnya.
 
-### sessionStorage Object
+### Obyek sessionStorage
 
 Objek `sessionStorage` bekerja dengan cara yang mirip dengan `localStorage` (untuk mencoba `sessionStorage`, silakan gunakan kode sebelumnya namun ganti objek `localStorage` dengan `sessionStorage`). Namun apabila browser ditutup dan halaman sebelumnya dibuka kembali, _click count_ akan dimulai kembali dari 0.
 
