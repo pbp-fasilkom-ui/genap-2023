@@ -319,11 +319,11 @@ Kita sudah membuat mekanisme `logout` dan menyelesaikan sistem autentikasi pada 
     from django.contrib.auth.decorators import login_required
     ```
 
-2. Tambahkan kode `@login_required(login_url='/money_tracker/login/')` di atas fungsi `show_tracker` agar halaman _money tracker_ hanya dapat diakses oleh pengguna yang sudah login (terautentikasi). Apabila pengguna belum terautentikasi, maka aplikasi akan menampilkan halaman login kepada pengguna.
+2. Tambahkan kode `@login_required(login_url='/tracker/login/')` di atas fungsi `show_tracker` agar halaman _money tracker_ hanya dapat diakses oleh pengguna yang sudah login (terautentikasi). Apabila pengguna belum terautentikasi, maka aplikasi akan menampilkan halaman login kepada pengguna.
 
     ```python
     ...
-    @login_required(login_url='/money_tracker/login/')
+    @login_required(login_url='/tracker/login/')
     def show_tracker(request):
     ...
     ```
