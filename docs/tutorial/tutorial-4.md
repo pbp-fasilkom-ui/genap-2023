@@ -1,4 +1,4 @@
-# Tutorial 4: Metode Update dan Delete pada Data & Web Design Menggunakan HTML dan CSS3
+# Tutorial 4: Desain Web Menggunakan HTML dan CSS3 & Metode Update dan Delete pada Data
 
 Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu Komputer Universitas Indonesia, Semester Genap 2022/2023
 
