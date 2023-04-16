@@ -13,17 +13,17 @@
       
       
       
-        <link rel="prev" href="../tugas-3/">
+        <link rel="prev" href="../tugas-6/">
       
       
-        <link rel="next" href="../tugas-5/">
+        <link rel="next" href="../../proyek/pts/">
       
       <link rel="icon" href="../../assets/img/logo.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6">
     
     
       
-        <title>Tugas 4 - PBP Genap 2022/2023</title>
+        <title>Tugas 7 - PBP Genap 2022/2023</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tugas-4-pengimplementasian-form-dan-autentikasi-menggunakan-django" class="md-skip">
+        <a href="#tugas-7-elemen-dasar-flutter" class="md-skip">
           Lewati ke isi
         </a>
       
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tugas 4
+              Tugas 7
             
           </span>
         </div>
@@ -552,6 +552,48 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../tugas-4/" class="md-nav__link">
+        Tugas 4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tugas-5/" class="md-nav__link">
+        Tugas 5
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tugas-6/" class="md-nav__link">
+        Tugas 6
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -564,12 +606,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Tugas 4
+          Tugas 7
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Tugas 4
+        Tugas 7
       </a>
       
         
@@ -612,48 +654,6 @@
   
 </nav>
       
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../tugas-5/" class="md-nav__link">
-        Tugas 5
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../tugas-6/" class="md-nav__link">
-        Tugas 6
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../tugas-7/" class="md-nav__link">
-        Tugas 7
-      </a>
     </li>
   
 
@@ -780,50 +780,43 @@
                   
 
 
-<h1 id="tugas-4-pengimplementasian-form-dan-autentikasi-menggunakan-django">Tugas 4: Pengimplementasian Form dan Autentikasi Menggunakan Django</h1>
+<h1 id="tugas-7-elemen-dasar-flutter">Tugas 7: Elemen Dasar Flutter</h1>
 <p>Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu Komputer Universitas Indonesia, Semester Genap 2022/2023</p>
 <hr />
 <h2 id="deskripsi-tugas">Deskripsi Tugas</h2>
-<p>Pada tugas ini, kamu akan mengimplementasikan konsep autentikasi, dan beberapa hal yang sudah kamu pelajari selama tutorial lab.</p>
-<p>Adapun pada tugas ini, kamu diminta untuk:</p>
-<ol>
-<li>
-<p>Membuat <em>form</em> registrasi pada aplikasi <em>study tracker</em>.</p>
-</li>
-<li>
-<p>Membuat <em>form</em> <em>login</em> pada aplikasi <em>study tracker</em>.</p>
-</li>
-<li>
-<p>Membuat fungsi <em>logout</em> pada aplikasi <em>study tracker</em>.</p>
-</li>
-<li>
-<p>Melakukan restriksi akses pada halaman <em>study tracker</em>.</p>
-</li>
-<li>
-<p>Membuat sebuah <code>README.md</code> yang berisi tautan menuju aplikasi Railway yang sudah kamu <em>deploy</em> (jika dapat di-<em>deploy</em>) serta jawaban dari beberapa pertanyaan berikut:</p>
+<p>Pada tugas ini, kamu akan mengimplementasikan beberapa elemen dasar pada Flutter.</p>
+<p><em>Checklist</em> untuk tugas ini adalah sebagai berikut.</p>
 <ul>
-<li>Apa kegunaan <code>{% csrf_token %}</code> pada elemen <code>&lt;form&gt;</code>? Apa yang terjadi apabila tidak ada potongan kode tersebut pada elemen <code>&lt;form&gt;</code>?</li>
-<li>Apakah kita dapat membuat elemen <code>&lt;form&gt;</code> secara manual (tanpa menggunakan <em>generator</em> seperti <code>{{ form.as_table }}</code>)? Jelaskan secara gambaran besar bagaimana cara membuat <code>&lt;form&gt;</code> secara manual.</li>
-<li>Jelaskan proses alur data dari submisi yang dilakukan oleh pengguna melalui HTML form, penyimpanan data pada <em>database</em>, hingga munculnya data yang telah disimpan pada <em>template</em> HTML.</li>
-<li>Jelaskan bagaimana cara kamu mengimplementasikan <em>checklist</em> di atas.</li>
+<li>Membuat sebuah program Flutter baru dengan nama <code>study_tracker</code>.</li>
+<li>Membuat tiga tombol sederhana dengan ikon dan teks untuk:</li>
+<li>Melihat study tracker (<code>Lihat Study Tracker</code>)</li>
+<li>Menambahkan tugas pada study tracker (<code>Tambah Tugas</code>)</li>
+<li>Logout (<code>Logout</code>)</li>
+<li>Memunculkan <code>Snackbar</code> yang muncul dengan tulisan:</li>
+<li>"Kamu telah menekan tombol Lihat Study Tracker" ketika tombol <code>Lihat Study Tracker</code> ditekan.</li>
+<li>"Kamu telah menekan tombol Tambah Tugas" ketika tombol <code>Tambah Tugas</code> ditekan.</li>
+<li>"Kamu telah menekan tombol Logout" ketika tombol <code>Logout</code> ditekan.</li>
+<li>Menjawab beberapa pertanyaan berikut pada <code>README.md</code> pada <em>root folder</em>.</li>
+<li>Jelaskan apa yang dimaksud dengan <em>stateless widget</em> dan <em>stateful widget</em> dan jelaskan perbedaan dari keduanya.</li>
+<li>Sebutkan seluruh widget yang kamu pakai di proyek kali ini dan jelaskan fungsinya masing-masing.</li>
+<li>Jelaskan bagaimana cara kamu mengimplementasikan <em>checklist</em> di atas secara <em>step-by-step</em> (bukan hanya sekadar mengikuti tutorial).</li>
+<li>Melakukan <code>add</code>-<code>commit</code>-<code>push</code> ke suatu repositori baru di GitHub. Kamu dapat menamai repositori barumu dengan nama <code>pbp-flutter-lab</code>.</li>
 </ul>
-</li>
-</ol>
 <h2 id="tenggat-waktu-pengerjaan">Tenggat Waktu Pengerjaan</h2>
-<p>Tugas ini memiliki tenggat waktu pengumpulan pada tanggal 12 Maret 2023 pada pukul 23.59. Asisten dosen akan mengecek <em>last commit</em> dari repositori tugas lab, sehingga kamu tidak perlu mengumpulkan tautan repositori ke dalam slot submisi.</p>
+<p>Tugas ini memiliki tenggat waktu pengumpulan pada tanggal <strong>7 Mei 2021</strong> pada pukul <strong>23.59 WIB</strong>. Harap mengumpulkan link repositori yang kamu gunakan ke dalam slot submisi yang telah disediakan di SCELE.</p>
 <h2 id="bonus">Bonus</h2>
-<p>Kamu akan mendapatkan nilai bonus pada penilaian tugas ini apabila kamu menambahkan <em>Cookies</em> yang menampilkan data <em>last login</em> pada halaman <em>study tracker</em></p>
+<p>Kamu akan mendapatkan nilai bonus pada penilaian tugas ini apabila kamu mengimplementasikan warna-warna yang berbeda untuk setiap tombol (<code>Lihat Study Tracker</code>, <code>Tambah Tugas</code>, dan <code>Logout</code>).</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Pembaruan terakhir:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">4 Maret 2023 11:32:33</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">16 April 2023 15:35:16</span>
       
         <br>
         Dibuat:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">4 Maret 2023 11:32:33</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">16 April 2023 15:35:16</span>
       
     
   </small>
