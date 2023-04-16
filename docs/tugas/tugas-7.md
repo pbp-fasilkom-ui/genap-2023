@@ -27,7 +27,7 @@ _Checklist_ untuk tugas ini adalah sebagai berikut.
 
 ## Tenggat Waktu Pengerjaan
 
-Tugas ini memiliki tenggat waktu pengumpulan pada tanggal **7 Mei 2021** pada pukul **23.59 WIB**. Harap mengumpulkan link repositori yang kamu gunakan ke dalam slot submisi yang telah disediakan di SCELE.
+Tugas ini memiliki tenggat waktu pengumpulan pada tanggal **7 Mei 2023** pada pukul **23.59 WIB**. Harap mengumpulkan link repositori yang kamu gunakan ke dalam slot submisi yang telah disediakan di SCELE.
 
 ## Bonus
 
