@@ -12,17 +12,17 @@ _Checklist_ untuk tugas ini adalah sebagai berikut.
 
 - Membuat sebuah program Flutter baru dengan nama `study_tracker`.
 - Membuat tiga tombol sederhana dengan ikon dan teks untuk:
-  - Melihat study tracker (`Lihat Study Tracker`)
-  - Menambahkan tugas pada study tracker (`Tambah Tugas`)
-  - Logout (`Logout`)
+    - Melihat study tracker (`Lihat Study Tracker`)
+  	- Menambahkan tugas pada study tracker (`Tambah Tugas`)
+  	- Logout (`Logout`)
 - Memunculkan `Snackbar` yang muncul dengan tulisan:
-  - "Kamu telah menekan tombol Lihat Study Tracker" ketika tombol `Lihat Study Tracker` ditekan.
-  - "Kamu telah menekan tombol Tambah Tugas" ketika tombol `Tambah Tugas` ditekan.
-  - "Kamu telah menekan tombol Logout" ketika tombol `Logout` ditekan.
+	- "Kamu telah menekan tombol Lihat Study Tracker" ketika tombol `Lihat Study Tracker` ditekan.
+	- "Kamu telah menekan tombol Tambah Tugas" ketika tombol `Tambah Tugas` ditekan.
+	- "Kamu telah menekan tombol Logout" ketika tombol `Logout` ditekan.
 - Menjawab beberapa pertanyaan berikut pada `README.md` pada _root folder_.
-  - Jelaskan apa yang dimaksud dengan _stateless widget_ dan _stateful widget_ dan jelaskan perbedaan dari keduanya.
-  - Sebutkan seluruh widget yang kamu pakai di proyek kali ini dan jelaskan fungsinya masing-masing.
-  - Jelaskan bagaimana cara kamu mengimplementasikan _checklist_ di atas secara _step-by-step_ (bukan hanya sekadar mengikuti tutorial).
+	- Jelaskan apa yang dimaksud dengan _stateless widget_ dan _stateful widget_ dan jelaskan perbedaan dari keduanya.
+	- Sebutkan seluruh widget yang kamu pakai di proyek kali ini dan jelaskan fungsinya masing-masing.
+	- Jelaskan bagaimana cara kamu mengimplementasikan _checklist_ di atas secara _step-by-step_ (bukan hanya sekadar mengikuti tutorial).
 - Melakukan `add`-`commit`-`push` ke suatu repositori baru di GitHub. Kamu dapat menamai repositori barumu dengan nama `pbp-flutter-lab`.
 
 ## Tenggat Waktu Pengerjaan
