@@ -10,14 +10,15 @@
 
 ## Aturan Umum Tugas Kelompok
 
-1. Satu kelompok membuat satu repositori git yang digunakan oleh seluruh anggota kelompok untuk bekerja sama. Kumpulkan tautan repositori git ke Scele,
-2. Repositori git memuat README.md yang berisi:
+1. Kelompok proyek akhir semester merupakan kelompok yang sama dengan kelompok proyek tengah semester.
+2. Satu kelompok membuat satu repositori git yang digunakan oleh seluruh anggota kelompok untuk bekerja sama. Kumpulkan tautan repositori git ke Scele.
+3. Repositori git memuat README.md yang berisi:
     - Nama anggota kelompok.
     - Deskripsi aplikasi (nama dan fungsi aplikasi serta peran/aktor pengguna aplikasi).
     - Daftar fitur/modul yang diimplementasikan beserta pembagian kerja per anggota.
     - Alur pengintegrasian dengan *web service* untuk terhubung dengan aplikasi web yang sudah dibuat saat Proyek Tengah Semester.
     - Tautan APK; tidak harus ada pada saat Tahap I. Tautan APK dapat ditambahkan belakangan ke README.md setelah selesai mengerjakan Tahap II.
-3. *Deployment* aplikasi
+4. *Deployment* aplikasi
     - *Build* dan rilis aplikasi ke GitHub (sebagai Release) dan platform cloud (Firebase App Distribution atau Microsoft App Center) menggunakan GitHub Actions.
     - Gunakan logo aplikasi Anda sendiri.
 
