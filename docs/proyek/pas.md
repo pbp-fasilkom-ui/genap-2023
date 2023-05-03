@@ -1,4 +1,4 @@
-# Proyek Akhir Semester PBP
+# Proyek Akhir Semester
 
 **Membuat Aplikasi *Mobile* menggunakan Framework *Flutter* secara Berkelompok**
 
