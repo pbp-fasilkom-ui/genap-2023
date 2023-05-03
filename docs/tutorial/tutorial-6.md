@@ -1,4 +1,4 @@
-# Tutorial 6: Introduction to Flutter
+# Tutorial 6: Pengantar Tentang Flutter
 
 Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu Komputer Universitas Indonesia, Semester Genap 2022/2023
 
