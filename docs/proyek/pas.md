@@ -12,7 +12,7 @@
 
 1. Kelompok proyek akhir semester merupakan kelompok yang sama dengan kelompok proyek tengah semester.
 2. Satu kelompok membuat satu repositori git yang digunakan oleh seluruh anggota kelompok untuk bekerja sama. Kumpulkan tautan repositori git ke Scele.
-3. Repositori git memuat README.md yang berisi:
+3. Repositori git memuat `README.md` yang berisi:
     - Nama anggota kelompok.
     - Deskripsi aplikasi (nama dan fungsi aplikasi serta peran/aktor pengguna aplikasi).
     - Daftar fitur/modul yang diimplementasikan beserta pembagian kerja per anggota.
