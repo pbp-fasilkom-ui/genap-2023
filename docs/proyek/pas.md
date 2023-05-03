@@ -56,7 +56,7 @@ Setiap anggota kelompok wajib mengimplementasikan sebuah modul.
             <b>Tenggat Waktu:</b>
             <b style="color:red;">Senin, 14 Mei 2023, pukul 23:55 WIB</b>
             <br />
-            <b>Kumpulkan tautan GitHub</b> dengan <em>code base</em> dan file <code>README.md</code> yang sudah disiapkan secara lengkap di GitHub.
+            <b>Kumpulkan tautan GitHub</b> dengan <em>code base</em> dan file <code>README.md</code> yang sudah disiapkan secara lengkap ke Scele.
             <br />
             <br />
             <p><b>Kriteria Submisi:</b> Terdapat file <code>README.md</code> beserta <em>code base</em> pada repositori GitHub</p>
