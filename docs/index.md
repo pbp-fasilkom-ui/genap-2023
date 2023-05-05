@@ -1,8 +1,12 @@
 # Beranda
 
-Selamat datang di Pemrograman Berbasis Platform Semester Genap 2022/2023. Situs web ini akan memuat informasi terkait dengan perkuliahan yang akan dipublikasikan secara rutin, seperti dokumen tutorial, tugas individu, dan tugas kelompok. Harap cek situs web ini secara berkala.
+<p align="center">
+  <img src="assets/img/foto-bersama.png"/>
+</p>
 
-![Foto Bersama](assets/img/foto-bersama.png)
+<center><small>Foto Bersama Tim Pengajar PBP Genap 2022/2023</small></center>
+
+Selamat datang di Pemrograman Berbasis Platform Semester Genap 2022/2023. Situs web ini akan memuat informasi terkait dengan perkuliahan yang akan dipublikasikan secara rutin, seperti dokumen tutorial, tugas individu, dan tugas kelompok. Harap cek situs web ini secara berkala.
 
 ## Dosen
 
