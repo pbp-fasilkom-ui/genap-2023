@@ -18,7 +18,7 @@ Adapun pada tugas ini, kamu diminta untuk:
 
     - `name` untuk nama tugas dengan tipe `CharField`,
     - `subject` untuk mata kuliah tugas dengan tipe `CharField`,
-    - `date` untuk tenggat waktu tugas dengan tipe `DateTimeField`,
+    - `date` untuk waktu input tugas dengan tipe `DateTimeField`,
     - `progress` untuk indikator _progress_ tugas dengan tipe `IntegerField`,
     - `description` untuk deskripsi tugas dengan tipe `TextField`.
 
