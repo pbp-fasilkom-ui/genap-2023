@@ -871,6 +871,8 @@ Akhir kata, ingatlah bahwa pengembangan aplikasi multiplatform adalah bidang yan
   <b>Buona fortuna!</b>
 </h2>
 
+---
+
 ## Referensi Tambahan
 
 - [Fetch Data From the Internet](https://docs.flutter.dev/cookbook/networking/fetch-data)
