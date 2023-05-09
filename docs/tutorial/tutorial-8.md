@@ -867,7 +867,9 @@ Namun, pembelajaran tidak berhenti di sini. Dunia pengembangan terus berkembang 
 
 Akhir kata, ingatlah bahwa pengembangan aplikasi multiplatform adalah bidang yang menarik dan penuh potensi. Teruslah eksplorasi dan berinovasi, dan tim pengajar yakin kalian memiliki masa depan yang cerah sebagai pengembang perangkat lunak. Terima kasih dan semoga sukses dalam perjalanan kalian!
 
-**_Arrivederci!_**
+<h2 align="center">
+  <b>Buona fortuna!</b>
+</h2>
 
 ## Referensi Tambahan
 
