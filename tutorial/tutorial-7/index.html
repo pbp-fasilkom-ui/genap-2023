@@ -19,7 +19,7 @@
         <link rel="next" href="../../tugas/tugas-1/">
       
       <link rel="icon" href="../../assets/img/logo.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.9">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
     
     
       
@@ -1289,7 +1289,7 @@
 <li>
 <p>Buatlah <em>widget</em> T<code>extFormField</code> yang dibungkus oleh <code>Padding</code> sebagai salah satu <em>children</em> dari <em>widget</em> <code>Column</code>. Selain itu, tambahkan variabel baru sebagai <em>placeholder</em> dari nilai yang diketik pada <code>TextFormField</code> nantinya. Buatlah <code>TextFormField</code> sebagai penampung variabel jumlah transaksi. Berikut adalah contohnya.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="p">...</span>
-<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="kt">double</span><span class="w"> </span><span class="n">jumlahTransaksi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">jumlahTransaksi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span>
 <a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>
 <a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="nd">@override</span>
 <a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="p">...</span>
@@ -1314,13 +1314,13 @@
 <a id="__codelineno-19-24" name="__codelineno-19-24" href="#__codelineno-19-24"></a><span class="w">                  </span><span class="c1">// Menambahkan behavior saat jumlah diketik</span>
 <a id="__codelineno-19-25" name="__codelineno-19-25" href="#__codelineno-19-25"></a><span class="w">                  </span><span class="nl">onChanged:</span><span class="w"> </span><span class="p">(</span><span class="kt">String</span><span class="o">?</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-19-26" name="__codelineno-19-26" href="#__codelineno-19-26"></a><span class="w">                    </span><span class="n">setState</span><span class="p">(()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-19-27" name="__codelineno-19-27" href="#__codelineno-19-27"></a><span class="w">                      </span><span class="n">jumlahTransaksi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">double</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span><span class="n">value</span><span class="o">!</span><span class="p">);</span>
+<a id="__codelineno-19-27" name="__codelineno-19-27" href="#__codelineno-19-27"></a><span class="w">                      </span><span class="n">jumlahTransaksi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">int</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span><span class="n">value</span><span class="o">!</span><span class="p">);</span>
 <a id="__codelineno-19-28" name="__codelineno-19-28" href="#__codelineno-19-28"></a><span class="w">                    </span><span class="p">});</span>
 <a id="__codelineno-19-29" name="__codelineno-19-29" href="#__codelineno-19-29"></a><span class="w">                  </span><span class="p">},</span>
 <a id="__codelineno-19-30" name="__codelineno-19-30" href="#__codelineno-19-30"></a><span class="w">                  </span><span class="c1">// Menambahkan behavior saat data disimpan</span>
 <a id="__codelineno-19-31" name="__codelineno-19-31" href="#__codelineno-19-31"></a><span class="w">                  </span><span class="nl">onSaved:</span><span class="w"> </span><span class="p">(</span><span class="kt">String</span><span class="o">?</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-19-32" name="__codelineno-19-32" href="#__codelineno-19-32"></a><span class="w">                    </span><span class="n">setState</span><span class="p">(()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-19-33" name="__codelineno-19-33" href="#__codelineno-19-33"></a><span class="w">                      </span><span class="n">jumlahTransaksi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">double</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span><span class="n">value</span><span class="o">!</span><span class="p">);</span>
+<a id="__codelineno-19-33" name="__codelineno-19-33" href="#__codelineno-19-33"></a><span class="w">                      </span><span class="n">jumlahTransaksi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">int</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span><span class="n">value</span><span class="o">!</span><span class="p">);</span>
 <a id="__codelineno-19-34" name="__codelineno-19-34" href="#__codelineno-19-34"></a><span class="w">                    </span><span class="p">});</span>
 <a id="__codelineno-19-35" name="__codelineno-19-35" href="#__codelineno-19-35"></a><span class="w">                  </span><span class="p">},</span>
 <a id="__codelineno-19-36" name="__codelineno-19-36" href="#__codelineno-19-36"></a><span class="w">                  </span><span class="c1">// Validator sebagai validasi form</span>
@@ -1473,7 +1473,7 @@
   <small>
     
       Pembaruan terakhir:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">3 Mei 2023 07:05:33</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">10 Mei 2023 00:20:35</span>
       
         <br>
         Dibuat:
