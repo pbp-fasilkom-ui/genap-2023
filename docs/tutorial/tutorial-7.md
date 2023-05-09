@@ -378,7 +378,7 @@ Kita akan mencoba untuk menambahkan dua tipe input form yang ada di Flutter, yai
 
     ```dart
     ...
-    double jumlahTransaksi = 0;
+    int jumlahTransaksi = 0;
 
     @override
     ...
@@ -403,13 +403,13 @@ Kita akan mencoba untuk menambahkan dua tipe input form yang ada di Flutter, yai
                       // Menambahkan behavior saat jumlah diketik
                       onChanged: (String? value) {
                         setState(() {
-                          jumlahTransaksi = double.parse(value!);
+                          jumlahTransaksi = int.parse(value!);
                         });
                       },
                       // Menambahkan behavior saat data disimpan
                       onSaved: (String? value) {
                         setState(() {
-                          jumlahTransaksi = double.parse(value!);
+                          jumlahTransaksi = int.parse(value!);
                         });
                       },
                       // Validator sebagai validasi form
