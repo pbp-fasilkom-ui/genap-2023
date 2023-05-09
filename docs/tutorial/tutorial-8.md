@@ -522,6 +522,7 @@ Untuk melakukan perintah _HTTP request_, kita membutuhkan _package_ tambahan yak
         <uses-permission android:name="android.permission.INTERNET" />
     ...
     ```
+
 ---
 
 ## Tutorial: Mengambil, Mengolah, dan Menampilkan Data dari *Web Service*
