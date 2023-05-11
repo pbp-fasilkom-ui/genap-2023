@@ -13,17 +13,17 @@
       
       
       
-        <link rel="prev" href="../tugas-3/">
+        <link rel="prev" href="../tugas-8/">
       
       
-        <link rel="next" href="../tugas-5/">
+        <link rel="next" href="../../proyek/pts/">
       
       <link rel="icon" href="../../assets/img/logo.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
     
     
       
-        <title>Tugas 4 - PBP Genap 2022/2023</title>
+        <title>Tugas 9 - PBP Genap 2022/2023</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tugas-4-pengimplementasian-form-dan-autentikasi-menggunakan-django" class="md-skip">
+        <a href="#tugas-9-integrasi-web-service-dengan-aplikasi-flutter" class="md-skip">
           Lewati ke isi
         </a>
       
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tugas 4
+              Tugas 9
             
           </span>
         </div>
@@ -594,66 +594,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Tugas 4
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../tugas-4/" class="md-nav__link">
         Tugas 4
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Daftar isi">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Daftar isi
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#deskripsi-tugas" class="md-nav__link">
-    Deskripsi Tugas
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tenggat-waktu-pengerjaan" class="md-nav__link">
-    Tenggat Waktu Pengerjaan
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bonus" class="md-nav__link">
-    Bonus
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -719,11 +664,66 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../tugas-9/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Tugas 9
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Tugas 9
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Daftar isi">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Daftar isi
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#deskripsi-tugas" class="md-nav__link">
+    Deskripsi Tugas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tenggat-waktu-pengerjaan" class="md-nav__link">
+    Tenggat Waktu Pengerjaan
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bonus" class="md-nav__link">
+    Bonus
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -866,50 +866,75 @@
                   
 
 
-<h1 id="tugas-4-pengimplementasian-form-dan-autentikasi-menggunakan-django">Tugas 4: Pengimplementasian Form dan Autentikasi Menggunakan Django</h1>
-<p>Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu Komputer Universitas Indonesia, Semester Genap 2022/2023</p>
+<h1 id="tugas-9-integrasi-web-service-dengan-aplikasi-flutter">Tugas 9: Integrasi Web Service dengan Aplikasi Flutter</h1>
+<p>Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu Komputer, Universitas Indonesia, Semester Genap 2022/2023</p>
 <hr />
 <h2 id="deskripsi-tugas">Deskripsi Tugas</h2>
-<p>Pada tugas ini, kamu akan mengimplementasikan konsep autentikasi, dan beberapa hal yang sudah kamu pelajari selama tutorial lab.</p>
-<p>Adapun pada tugas ini, kamu diminta untuk:</p>
-<ol>
-<li>
-<p>Membuat <em>form</em> registrasi pada aplikasi <em>study tracker</em>.</p>
-</li>
-<li>
-<p>Membuat <em>form</em> <em>login</em> pada aplikasi <em>study tracker</em>.</p>
-</li>
-<li>
-<p>Membuat fungsi <em>logout</em> pada aplikasi <em>study tracker</em>.</p>
-</li>
-<li>
-<p>Melakukan restriksi akses pada halaman <em>study tracker</em>.</p>
-</li>
-<li>
-<p>Membuat sebuah <code>README.md</code> yang berisi tautan menuju aplikasi Railway yang sudah kamu <em>deploy</em> (jika dapat di-<em>deploy</em>) serta jawaban dari beberapa pertanyaan berikut:</p>
+<p>Pada tugas ini, kamu akan mengintegrasikan servis Django yang sudah kamu buat pada tugas-tugas sebelumnya dengan aplikasi Flutter yang sudah kamu buat sebelumnya.</p>
+<p><em>Checklist</em> untuk tugas ini adalah sebagai berikut.</p>
 <ul>
-<li>Apa kegunaan <code>{% csrf_token %}</code> pada elemen <code>&lt;form&gt;</code>? Apa yang terjadi apabila tidak ada potongan kode tersebut pada elemen <code>&lt;form&gt;</code>?</li>
-<li>Apakah kita dapat membuat elemen <code>&lt;form&gt;</code> secara manual (tanpa menggunakan <em>generator</em> seperti <code>{{ form.as_table }}</code>)? Jelaskan secara gambaran besar bagaimana cara membuat <code>&lt;form&gt;</code> secara manual.</li>
-<li>Jelaskan proses alur data dari submisi yang dilakukan oleh pengguna melalui HTML form, penyimpanan data pada <em>database</em>, hingga munculnya data yang telah disimpan pada <em>template</em> HTML.</li>
-<li>Jelaskan bagaimana cara kamu mengimplementasikan <em>checklist</em> di atas.</li>
+<li>
+<p>Migrasi proyek tugas Django kamu ke salah satu PaaS alternatif.</p>
+</li>
+<li>
+<p>Membuat halaman login pada proyek tugas Flutter.</p>
+</li>
+<li>
+<p>Mengintegrasikan sistem autentikasi Django dengan proyek tugas Flutter.</p>
+</li>
+<li>
+<p>Membuat model kustom sesuai dengan proyek aplikasi Django.</p>
+</li>
+<li>
+<p>Membuat halaman yang berisi semua tugas yang ada pada <em>endpoint</em> <code>JSON</code> di Django yang telah kamu <em>deploy</em> sebelumnya. Pada bagian ini, kamu cukup menampilkan judul, mata kuliah, dan tanggal tambah tugas.</p>
+<p><img alt="Tugas" src="https://i.ibb.co/W2qQN3f/contoh-tugas.png" /></p>
+</li>
+<li>
+<p>Membuat halaman detail untuk setiap tugas yang ada pada daftar tersebut. Halaman ini menampilkan judul, mata kuliah, tanggal, progress, dan deskripsi tugas. Halaman ini diakses dengan menekan tugas pada halaman daftar tugas.</p>
+</li>
+<li>
+<p>Menambahkan tombol untuk kembali ke daftar tugas.</p>
+<p><img alt="Detail" src="https://i.ibb.co/VCQz3xq/Tugas-9.png" /></p>
+</li>
+<li>
+<p>Menjawab beberapa pertanyaan berikut pada <code>README.md</code> pada <em>root folder</em> (silakan modifikasi <code>README.md</code> yang telah kamu buat sebelumnya; tambahkan subjudul untuk setiap tugas).</p>
+<ul>
+<li>
+<p>Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?</p>
+</li>
+<li>
+<p>Jelaskan mekanisme pengambilan data dari JSON hingga dapat ditampilkan pada Flutter.</p>
+</li>
+<li>
+<p>Jelaskan mekanisme autentikasi dari input data akun pada Flutter ke Django hingga selesainya proses autentikasi oleh Django dan tampilnya menu pada Flutter.</p>
+</li>
+<li>
+<p>Sebutkan seluruh <em>widget</em> yang kamu pakai pada tugas ini dan jelaskan fungsinya masing-masing.</p>
+</li>
+<li>
+<p>Jelaskan bagaimana cara kamu mengimplementasikan <em>checklist</em> di atas secara <em>step-by-step</em> (bukan hanya sekadar mengikuti tutorial).</p>
+</li>
 </ul>
 </li>
-</ol>
+<li>
+<p>Melakukan <code>add</code>-<code>commit</code>-<code>push</code> ke GitHub.</p>
+</li>
+</ul>
 <h2 id="tenggat-waktu-pengerjaan">Tenggat Waktu Pengerjaan</h2>
-<p>Tugas ini memiliki tenggat waktu pengumpulan pada tanggal 12 Maret 2023 pada pukul 23.59. Asisten dosen akan mengecek <em>last commit</em> dari repositori tugas lab, sehingga kamu tidak perlu mengumpulkan tautan repositori ke dalam slot submisi.</p>
+<p>Tugas ini memiliki tenggat waktu pengumpulan pada tanggal <strong>21 Mei 2023</strong> pada pukul 23.59. Asisten dosen akan mengecek <em>last commit</em> dari repositori tugas lab, sehingga kamu tidak perlu mengumpulkan tautan repositori ke dalam slot submisi.</p>
 <h2 id="bonus">Bonus</h2>
-<p>Kamu akan mendapatkan nilai bonus pada penilaian tugas ini apabila kamu menambahkan <em>Cookies</em> yang menampilkan data <em>last login</em> pada halaman <em>study tracker</em></p>
+<p>Kamu akan mendapatkan nilai bonus pada penilaian tugas ini apabila kamu mengimplementasikan fitur registrasi akun pada tugas ini.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Pembaruan terakhir:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">4 Maret 2023 11:32:33</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">11 Mei 2023 14:31:16</span>
       
         <br>
         Dibuat:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">4 Maret 2023 11:32:33</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">11 Mei 2023 14:31:16</span>
       
     
   </small>
