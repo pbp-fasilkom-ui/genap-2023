@@ -21,7 +21,7 @@ _Checklist_ untuk tugas ini adalah sebagai berikut.
 	- "Kamu telah menekan tombol Logout" ketika tombol `Logout` ditekan.
 - Menjawab beberapa pertanyaan berikut pada `README.md` pada _root folder_.
 	- Jelaskan apa yang dimaksud dengan _stateless widget_ dan _stateful widget_ dan jelaskan perbedaan dari keduanya.
-	- Sebutkan seluruh widget yang kamu pakai di proyek kali ini dan jelaskan fungsinya masing-masing.
+	- Sebutkan seluruh widget yang kamu pakai pada tugas ini dan jelaskan fungsinya masing-masing.
 	- Jelaskan bagaimana cara kamu mengimplementasikan _checklist_ di atas secara _step-by-step_ (bukan hanya sekadar mengikuti tutorial).
 - Melakukan `add`-`commit`-`push` ke suatu repositori baru di GitHub. Kamu dapat menamai repositori barumu dengan nama `pbp-flutter-lab`.
 

@@ -38,7 +38,7 @@ Pada tugas ini, kamu akan membuat `Form` untuk aplikasi *study tracker* yang sud
     - Jelaskan bagaimana cara kerja `Navigator` dalam "mengganti" halaman dari aplikasi Flutter.
     - Sebutkan dan jelaskan tipe *routing* yang disediakan oleh `Navigator`.
     - Sebutkan jenis-jenis *event* yang ada pada Flutter (contoh: `onPressed`).
-    - Sebutkan seluruh *widget* yang kamu pakai di proyek kali ini dan jelaskan fungsinya masing-masing.
+    - Sebutkan seluruh *widget* yang kamu pakai pada tugas ini dan jelaskan fungsinya masing-masing.
     - Jelaskan bagaimana cara kamu mengimplementasikan *checklist* di atas secara *step-by-step* (bukan hanya sekadar mengikuti tutorial).
 
 - Melakukan `add`-`commit`-`push` ke GitHub.
