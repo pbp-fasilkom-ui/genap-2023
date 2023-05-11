@@ -12,6 +12,7 @@ theme:
   logo: assets/img/logo.png
   favicon: assets/img/logo.png
   name: material
+  custom_dir: overrides
   features:
     - content.code.copy
     - content.code.annotate
