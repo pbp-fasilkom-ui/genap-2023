@@ -55,7 +55,7 @@ Setiap anggota kelompok wajib mengimplementasikan sebuah modul.
         </td>
         <td>
             <b>Tenggat Waktu:</b>
-            <b style="color:red;">Senin, 14 Mei 2023, pukul 23:55 WIB</b>
+            <b style="color:red;">Minggu, 14 Mei 2023, pukul 23:55 WIB</b>
             <br />
             <br />
             <b>Kumpulkan tautan GitHub</b> dengan <em>code base</em> dan file <code>README.md</code> yang sudah disiapkan secara lengkap ke Scele.
@@ -77,7 +77,7 @@ Setiap anggota kelompok wajib mengimplementasikan sebuah modul.
         </td>
         <td>
             <b>Tenggat Waktu:</b>
-            <b style="color:red;">Senin, 31 Mei 2023, pukul 23:55 WIB</b>
+            <b style="color:red;">Rabu, 31 Mei 2023, pukul 23:55 WIB</b>
             <br />
             <b style="color:red;">Demonstrasi dilakukan pada periode UAS</b>
             <br />
