@@ -533,7 +533,7 @@ Untuk melakukan perintah _HTTP request_, kita membutuhkan _package_ tambahan yak
 
     ```dart
     import 'package:http/http.dart' as http;
-    import 'dart:convert';
+    import 'dart:convert' as convert;
     import 'package:<APP_NAME>/model/transaction_record.dart';
     ...
     ```
@@ -541,11 +541,7 @@ Untuk melakukan perintah _HTTP request_, kita membutuhkan _package_ tambahan yak
 3. Salinlah potongan kode berikut pada `pages/transaction.dart`.
 
     ```dart
-    import 'package:flutter/material.dart';
-    import 'package:http/http.dart' as http;
-    import 'dart:convert';
-    import 'package:app_one/model/transaction_record.dart';
-
+    ...
     import '../widgets/drawer.dart';
 
     class TransactionPage extends StatefulWidget {
