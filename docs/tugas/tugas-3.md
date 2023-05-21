@@ -6,7 +6,7 @@ Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu 
 
 ## Deskripsi Tugas
 
-Pada tugas ini, kamu akan mengimplementasikan konsep _form_ dan _data delivery_ serta beberapa hal yang sudah kamu pelajari selama tutorial lab.
+Pada tugas ini, kamu akan mengimplementasikan konsep _form_ dan _data delivery_ serta beberapa hal yang sudah kamu pelajari selama tutorial.
 
 Adapun pada tugas ini, kamu diminta untuk:
 

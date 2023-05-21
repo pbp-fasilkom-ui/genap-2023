@@ -1,4 +1,4 @@
-# Lab 7: Flutter Navigation, Input, dan Form
+# Tutorial 7: Flutter Navigation, Input, dan Form
 
 Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu Komputer, Universitas Indonesia, Semester Genap 2022/2023
 

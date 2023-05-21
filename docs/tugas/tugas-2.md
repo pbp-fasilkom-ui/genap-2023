@@ -6,7 +6,7 @@ Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu 
 
 ## Deskripsi Tugas
 
-Pada tugas ini, kamu akan mengimplementasikan konsep Model-View-Template serta beberapa hal yang sudah kamu pelajari di kelas dan tutorial lab. Kamu dapat menyelesaikan tugas ini dengan memanfaatkan [_source code_ berikut](https://github.com/determinedguy/django-railway-template). Silakan baca dan ikuti petunjuk penggunaan _source code_ templat pada file `README.md`.
+Pada tugas ini, kamu akan mengimplementasikan konsep Model-View-Template serta beberapa hal yang sudah kamu pelajari di kelas dan tutorial. Kamu dapat menyelesaikan tugas ini dengan memanfaatkan [_source code_ berikut](https://github.com/determinedguy/django-railway-template). Silakan baca dan ikuti petunjuk penggunaan _source code_ templat pada file `README.md`.
 
 Adapun pada tugas ini, kamu diminta untuk:
 
