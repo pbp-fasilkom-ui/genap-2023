@@ -529,7 +529,7 @@ Untuk melakukan perintah _HTTP request_, kita membutuhkan _package_ tambahan yak
 
 1. Buatlah file baru pada folder `lib/pages` dengan nama `transaction.dart`.
 
-2. Pada file `transaction.dart`, impor _library_ yang dibutuhkan. Ubahlah <APP_NAME> sesuai dengan nama proyek Flutter yang kalian buat.
+2. Pada file `transaction.dart`, impor *library* yang dibutuhkan. Ubahlah <APP_NAME> sesuai dengan nama proyek Flutter yang kalian buat.
 
     ```dart
     import 'package:http/http.dart' as http;
@@ -542,7 +542,7 @@ Untuk melakukan perintah _HTTP request_, kita membutuhkan _package_ tambahan yak
 
     ```dart
     ...
-    import '../widgets/drawer.dart';
+    import 'package:<APP_NAME>/widgets/drawer.dart';
 
     class TransactionPage extends StatefulWidget {
     const TransactionPage({Key? key}) : super(key: key);
@@ -647,6 +647,7 @@ Untuk melakukan perintah _HTTP request_, kita membutuhkan _package_ tambahan yak
 4. Tambahkan halaman `transaction.dart` ke `widget/drawer.dart` dengan menambahkan kode berikut.
 
     ```dart
+    // Kode ListTile Menu
     ...
     ListTile(
         title: const Text('Riwayat Transaksi'),
