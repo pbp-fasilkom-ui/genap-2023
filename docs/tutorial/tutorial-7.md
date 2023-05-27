@@ -197,7 +197,7 @@ Setelah membuat menu, kita akan membuat halaman form yang akan menerima input da
     ...
     ```
 
-    `lib/widgets/dart.dart`
+    `lib/widgets/drawer.dart`
 
     ```dart
     import 'package:money_tracker/pages/form.dart';
