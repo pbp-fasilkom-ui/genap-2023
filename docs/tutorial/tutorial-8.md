@@ -558,10 +558,7 @@ Untuk melakukan perintah _HTTP request_, kita membutuhkan _package_ tambahan yak
             'https://<URL_APP_KAMU>/tracker/json/');
         var response = await http.get(
             url,
-            headers: {
-                "Access-Control-Allow-Origin": "*",
-                "Content-Type": "application/json",
-            },
+            headers: {"Content-Type": "application/json"},
         );
 
         // melakukan decode response menjadi bentuk json
